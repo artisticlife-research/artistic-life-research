@@ -19,12 +19,45 @@
              margin: 1.5em 0; border-radius: 0 4px 4px 0; }
   .region-note { background: #f0f4f8; border-left: 3px solid #7a9abf; padding: 8px 14px;
                  margin: 1em 0; font-size: 0.9rem; border-radius: 0 4px 4px 0; }
+  .lang-switch { display: flex; align-items: center; gap: 8px; justify-content: flex-end;
+                 margin-bottom: 8px; }
+  .lang-switch select { font-size: 0.9rem; padding: 5px 8px; border: 1px solid #ddd6c8;
+                        border-radius: 6px; background: #fffdf8; color: #3a3028; }
+  .gov-note { background: #f3efe6; border: 1px solid #e4dcc8; padding: 8px 14px; margin: 1em 0;
+              font-size: 0.85rem; border-radius: 6px; color: #5a5248; }
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
+  html[dir="rtl"] .lang-switch { justify-content: flex-start; }
+  html[dir="rtl"] .warning, html[dir="rtl"] .region-note { border-left: none; border-right: 4px solid #c9a84c; border-radius: 4px 0 0 4px; }
+  html[dir="rtl"] .region-note { border-right-color: #7a9abf; }
+  html[dir="rtl"] ul { padding-left: 0; padding-right: 1.4em; }
 </style>
 </head>
 <body>
 
+<div class="lang-switch">
+  <span aria-hidden="true">🌐</span>
+  <select id="langSelect" onchange="showLang(this.value)" aria-label="Language">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="pt">Português</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="it">Italiano</option>
+    <option value="ja">日本語</option>
+    <option value="ko">한국어</option>
+    <option value="zh">中文</option>
+    <option value="ru">Русский</option>
+    <option value="ar">العربية</option>
+    <option value="la">Latina</option>
+  </select>
+</div>
+
+<!-- ═══════════════ ENGLISH (authoritative) ═══════════════ -->
+<div class="lang-content" data-lang="en">
 <h1>Terms of Use</h1>
 <p class="updated">Effective date: May 29, 2026 &nbsp;|&nbsp; App: Bible Peace &nbsp;|&nbsp; Developer: Artistic Life Research</p>
+<div class="gov-note">This document is written in English, which is the governing language of these Terms. Translations into other languages are provided for convenience only; in case of any discrepancy, the English version prevails.</div>
 
 <p>Please read these Terms of Use ("Terms") carefully before using the Bible Peace mobile application ("App"). By downloading or using the App, you agree to be bound by these Terms.</p>
 
@@ -83,8 +116,12 @@
 <h2>10. Religious and Spiritual Content</h2>
 <p>The App presents Bible texts and spiritual reflections for personal reference. The content does not represent the official position of any religious denomination, church, or institution. Users of all faiths and backgrounds are welcome. The App does not discriminate on the basis of religion, race, gender, nationality, or any other protected characteristic.</p>
 
-<h2>11. Children's Use</h2>
-<p>The App is suitable for general audiences and is not specifically directed at children under 13 (or the applicable age in your jurisdiction). Parents and guardians are encouraged to supervise use by minors. The App does not knowingly collect personal data from any user, including minors.</p>
+<h2>11. Children's and Minors' Use</h2>
+<p>Bible Peace is intended for a general audience and is not directed at, or designed for, children. We recommend the App for users aged 13 and older.</p>
+<p>If you are below the age of majority in your country or jurisdiction, you may use the App only with the consent and supervision of a parent or legal guardian. By permitting a minor to use the App, that parent or guardian agrees to these Terms on the minor's behalf and accepts responsibility for the minor's use of the App.</p>
+<p>Bible Peace is distributed worldwide, and we recognize that minors use the App in widely differing cultural, educational, and family circumstances, sometimes without the same guidance available to others. The App presents the text of the Bible, which includes passages that may call for mature understanding or pastoral context. We therefore strongly encourage parents, guardians, and faith communities to guide and accompany any minor who uses the App.</p>
+<p>The App contains no advertising, no social or messaging features, and no user-to-user contact, and it has no external content beyond optional crisis-support and scripture-attribution links. It does not knowingly collect personal data from any user, including minors, and stores all content only on the user's own device.</p>
+<p>Any purchase (such as the optional Global Edition) is processed by the app store and requires authorization by the account holder. Parents and guardians are responsible for supervising purchases made on their devices or accounts.</p>
 
 <h2>12. Privacy</h2>
 <p>Your use of the App is also governed by our <a href="privacy-policy.html">Privacy Policy</a>, which is incorporated into these Terms by reference. The App does not collect, store on any server, or transmit personal data.</p>
@@ -93,42 +130,1073 @@
 <p>Artistic Life Research reserves the right to update these Terms at any time. Material changes will be reflected by an updated effective date. Continued use of the App after changes constitutes acceptance of the revised Terms.</p>
 
 <h2>14. Governing Law and Dispute Resolution</h2>
-<p>These Terms are governed by the laws of Japan. Any disputes arising from or relating to these Terms or the App shall be subject to the exclusive jurisdiction of the courts of Hiroshima, Japan. However, if you are a consumer, this choice of law and forum applies only to the extent permitted by the mandatory consumer protection laws of your country of residence; where those laws provide otherwise, they prevail, and you may bring proceedings in the courts of your country of residence.</p>
+<p>These Terms are governed by the laws of Japan. Any disputes arising from or relating to these Terms or the App shall be subject to the exclusive jurisdiction of the courts of Japan. However, if you are a consumer, this choice of law and forum applies only to the extent permitted by the mandatory consumer protection laws of your country of residence; where those laws provide otherwise, they prevail, and you may bring proceedings in the courts of your country of residence.</p>
 
 <div class="region-note">
 <strong>For consumers:</strong> Nothing in these Terms limits your rights under the mandatory consumer protection laws of your country of residence. Where such mandatory local provisions apply, they prevail over this governing law clause regardless of your location, and you may also bring claims before the courts of your country of residence. This applies to consumers in any jurisdiction, including, without limitation, the European Union and the European Economic Area.
 </div>
 
-<div class="region-note">
-<strong>For users in the United Kingdom:</strong> Your statutory rights as a UK consumer are not affected by these Terms. Mandatory provisions of UK consumer protection law apply where required.
-</div>
-
-<div class="region-note">
-<strong>For users in the United States:</strong> Nothing in these Terms waives any rights you may have under applicable US federal or state consumer protection laws. Some states do not allow certain limitations of liability or warranty exclusions; in such states those limitations apply to the fullest extent permitted.
-</div>
-
-<div class="region-note">
-<strong>For users in Brazil:</strong> Your rights under the Brazilian Consumer Protection Code (Código de Defesa do Consumidor) and the Lei Geral de Proteção de Dados (LGPD) are not affected by these Terms.
-</div>
-
-<div class="region-note">
-<strong>For users in South Korea:</strong> Your rights under Korean consumer protection law and the Personal Information Protection Act (PIPA) are not affected by these Terms.
-</div>
-
 <h2>15. Contact and Complaints</h2>
 <div class="contact">
   <strong>Artistic Life Research</strong><br>
-  Representative: Masaaki Kinoshita<br>
   Email: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
-  Website: <a href="https://artistic-life-research.com">https://artistic-life-research.com</a><br>
-  Address: 〒730-0012 広島県広島市中区上八丁堀3-9-302, Japan
+  Website: <a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
 </div>
 <p style="margin-top:1em;">For copyright, license, or content complaints, please see our <a href="https://artistic-life-research.com">website</a> or contact us directly. We respond within 7 business days.</p>
+</div>
 
-<p style="margin-top:2em; color:#888; font-size:0.85rem;">
-  <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp;
-  <a href="index.html">Home</a>
-</p>
+<!-- ═══════════════ 日本語 (Japanese) ═══════════════ -->
+<div class="lang-content" data-lang="ja">
+<h1>利用規約</h1>
+<p class="updated">発効日：2026年5月29日 &nbsp;|&nbsp; アプリ：Bible Peace &nbsp;|&nbsp; 開発者：Artistic Life Research</p>
+<div class="gov-note">これは便宜のための翻訳です。本規約の正本は英語版であり、相違がある場合は英語版が優先します。</div>
+
+<p>Bible Peace モバイルアプリ（以下「本アプリ」）をご利用になる前に、本利用規約（以下「本規約」）を注意深くお読みください。本アプリをダウンロードまたは利用した時点で、本規約に同意したものとみなされます。</p>
+
+<h2>1. 規約への同意</h2>
+<p>Bible Peace を利用することにより、あなたは13歳以上（またはお住まいの国で定めるデジタル同意年齢以上）であり、本規約に同意することを確認するものとします。同意できない場合は、本アプリを利用しないでください。</p>
+
+<h2>2. 本アプリの説明</h2>
+<p>Bible Peace は、無料かつオフライン優先の聖書参照アプリで、多言語の聖書本文、日替り聖句、聖書通読、祈りのツール、個人の日記機能を提供します。すべての聖書コンテンツは、個人的・教育的、また信仰のための参考目的でのみ表示されます。</p>
+
+<h2>3. 専門的助言ではありません — 重要な制限</h2>
+<div class="warning">
+<p><strong>Bible Peace は、医療・心理・精神科・法律・財務その他いかなる専門的助言も提供しません。</strong></p>
+<p>本アプリに表示される聖句・黙想・コンテンツは、一般的な信仰上・教育上の参考のみを目的としています。専門家への相談に代わるものではありません。精神的な危機・医療上の緊急事態・法的な問題に直面している場合は、ただちに有資格の専門家または緊急サービスに連絡してください。</p>
+<p><strong>本アプリは緊急対応サービスではありません。</strong>自分自身または他者に差し迫った危険がある場合は、今すぐお住まいの地域の緊急サービスに連絡してください（例：米国 911、英国 999、EU 112、日本 119、韓国 119）。</p>
+</div>
+
+<h2>4. 「聖書と語る」機能</h2>
+<p>「聖書と語る」機能は、ユーザーが入力したテキストを受け取り、キーワードやトピックに基づいて関連する聖句を返します。この機能は：</p>
+<ul>
+  <li>感情や精神状態を分析・診断・それに応答することは<strong>ありません</strong></li>
+  <li>カウンセリング・セラピー・信仰上の助言を提供することは<strong>ありません</strong></li>
+  <li>危機に関連するキーワードを検知した場合は、聖句を返す代わりに緊急時の安全画面を自動的に表示します</li>
+</ul>
+<p>この機能の出力は聖書の参照のみであり、いかなる種類の助言でもありません。</p>
+
+<h2>5. 許可される利用</h2>
+<p>本アプリは、個人的・非商業的・教育的な目的で利用できます。次の行為はできません：</p>
+<ul>
+  <li>本アプリのリバースエンジニアリング、逆コンパイル、逆アセンブル</li>
+  <li>違法な目的での利用</li>
+  <li>許可なく本アプリまたはそのコンテンツを複製・再配布すること</li>
+  <li>本アプリに含まれる聖書翻訳の著作者であると主張すること</li>
+</ul>
+
+<h2>6. 聖書コンテンツとライセンス</h2>
+<p>Bible Peace は、パブリックドメインまたはオープンライセンスの聖書翻訳を使用しています。各翻訳の完全な帰属表示は、アプリ内「クレジット / ライセンス」で確認できます。主なライセンス条件：</p>
+<ul>
+  <li><strong>World English Bible (WEB)</strong>：「World English Bible」は eBible.org の商標です。本文はパブリックドメインです。</li>
+  <li><strong>Bíblia Livre（ポルトガル語）</strong>：クリエイティブ・コモンズ 表示 3.0 ブラジル（CC BY 3.0 BR）でライセンスされています。© Diego Santos, Mario Sergio, Marco Teles。<a href="https://creativecommons.org/licenses/by/3.0/br/">ライセンス</a></li>
+  <li><strong>개역한글판（韓国語、KRV、1961）</strong>：公開されているオープンリポジトリから取得し、パブリックドメインとの前提で使用しています。パブリックドメインの状況は国・地域により異なる場合があります。</li>
+  <li><strong>口語訳聖書（日本語、1954/55）</strong>：パブリックドメインとの前提で使用しています（公表後50年・2005年満了）。パブリックドメインの状況は国・地域により異なる場合があります。</li>
+  <li>その他の翻訳は、すべての主要な法域においてパブリックドメインです。</li>
+</ul>
+
+<h2>7. 知的財産</h2>
+<p>Bible Peace アプリ、そのデザイン・コード・ユーザーインターフェース・オリジナルの文章（聖書本文を除く）は、Artistic Life Research の知的財産です。無断転載を禁じます。</p>
+<p>本アプリで使用しているフォント（Cormorant Garamond および Lato）は、SIL Open Font License 1.1 でライセンスされています。</p>
+
+<h2>8. 保証の否認</h2>
+<p>本アプリは「現状のまま」「提供可能な範囲で」提供され、商品性・特定目的への適合性・正確性・非侵害性を含むがこれらに限られない、明示または黙示のいかなる保証も伴いません。Artistic Life Research は、本アプリがエラーのないこと、中断のないこと、有害な要素を含まないことを保証しません。</p>
+
+<h2>9. 責任の制限</h2>
+<p>適用法が許容する最大限の範囲において、Artistic Life Research は、データの損失・利益の損失、または本アプリの利用もしくは利用不能から生じるいかなる損害を含め、間接的・付随的・特別・結果的・懲罰的損害について一切責任を負いません。</p>
+<p>適用法が特定の保証の排除または責任の制限を認めない場合、当該排除または制限は、その法が許容する範囲でのみ適用されます。消費者としてのあなたの法定の権利は影響を受けません。</p>
+
+<h2>10. 宗教的・信仰的コンテンツ</h2>
+<p>本アプリは、個人的な参考のために聖書本文と信仰に基づく黙想を提示します。そのコンテンツは、いかなる宗教宗派・教会・団体の公式な立場も代表するものではありません。あらゆる信仰・背景のユーザーを歓迎します。本アプリは、宗教・人種・性別・国籍その他の保護されるべき属性に基づく差別を行いません。</p>
+
+<h2>11. 子どもおよび未成年者の利用</h2>
+<p>Bible Peace は一般の利用者を対象としており、子どもを対象に設計・提供するものではありません。本アプリは13歳以上の利用を推奨します。</p>
+<p>お住まいの国または地域の成人年齢に満たない方は、保護者または法定後見人の同意および監督のもとでのみ本アプリを利用できます。保護者が未成年者に本アプリの利用を許可した場合、当該保護者は本人に代わって本規約に同意し、その未成年者による利用について責任を負うものとします。</p>
+<p>本アプリは全世界に配信されており、未成年者が、文化・教育・家庭の状況が大きく異なる環境で、十分な導きを得られないまま利用する場合があることを認識しています。本アプリは聖書本文を提示しますが、その中には成熟した理解や信仰上の文脈を要する箇所が含まれます。そのため、本アプリを利用する未成年者に対しては、保護者および信仰共同体が導き、寄り添うことを強く推奨します。</p>
+<p>本アプリには、広告、ソーシャル機能やメッセージ機能、利用者同士の接触はなく、任意の危機支援リンクと聖書出典リンクを除いて外部コンテンツもありません。未成年者を含むいかなる利用者からも個人データを意図的に収集せず、すべてのコンテンツは利用者自身の端末にのみ保存されます。</p>
+<p>購入（任意の Global Edition など）はアプリストアを通じて処理され、アカウント所有者の承認を要します。端末やアカウントで行われる購入の監督は保護者の責任です。</p>
+
+<h2>12. プライバシー</h2>
+<p>本アプリの利用は、<a href="privacy-policy.html?lang=ja">プライバシーポリシー</a>にも従うものとし、同ポリシーは参照により本規約に組み込まれます。本アプリは、個人データを収集・サーバー保存・送信しません。</p>
+
+<h2>13. 変更</h2>
+<p>Artistic Life Research は、いつでも本規約を更新する権利を有します。重要な変更は発効日の更新により反映されます。変更後も本アプリを継続して利用した場合、改訂後の規約に同意したものとみなされます。</p>
+
+<h2>14. 準拠法と紛争解決</h2>
+<p>本規約は日本法に準拠します。本規約または本アプリに起因または関連する紛争は、日本の裁判所の専属的管轄に服します。ただし、あなたが消費者である場合、この準拠法および管轄の選択は、お住まいの国の強行的な消費者保護法が許容する範囲でのみ適用されます。当該法が別段の定めをする場合はそれが優先し、あなたはお住まいの国の裁判所で手続きを行うことができます。</p>
+
+<div class="region-note">
+<strong>消費者の方へ：</strong>本規約のいかなる条項も、お住まいの国の強行的な消費者保護法上のあなたの権利を制限しません。当該強行規定が適用される場合、それはあなたの所在地にかかわらず本準拠法条項に優先し、あなたはお住まいの国の裁判所に請求を提起することもできます。これは、欧州連合および欧州経済領域を含むがこれに限られない、すべての法域の消費者に適用されます。
+</div>
+
+<h2>15. お問い合わせ・苦情</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  メール：<a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
+  ウェブサイト：<a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
+</div>
+<p style="margin-top:1em;">著作権・ライセンス・コンテンツに関する苦情は、<a href="https://artistic-life-research.com">ウェブサイト</a>をご覧いただくか、直接ご連絡ください。7営業日以内に対応します。</p>
+</div>
+
+<!-- ═══════════════ Español (Spanish) ═══════════════ -->
+<div class="lang-content" data-lang="es">
+<h1>Términos de Uso</h1>
+<p class="updated">Fecha de entrada en vigor: 29 de mayo de 2026 &nbsp;|&nbsp; App: Bible Peace &nbsp;|&nbsp; Desarrollador: Artistic Life Research</p>
+<div class="gov-note">Esta es una traducción de cortesía. La versión en inglés es la versión jurídicamente vinculante de estos Términos; en caso de discrepancia, prevalece el texto en inglés.</div>
+
+<p>Lea atentamente estos Términos de Uso ("Términos") antes de usar la aplicación móvil Bible Peace ("la App"). Al descargar o usar la App, usted acepta quedar vinculado por estos Términos.</p>
+
+<h2>1. Aceptación de los Términos</h2>
+<p>Al acceder a Bible Peace o usarla, usted confirma que tiene al menos 13 años (o la edad de consentimiento digital aplicable en su jurisdicción) y que acepta estos Términos. Si no está de acuerdo, no use la App.</p>
+
+<h2>2. Descripción de la App</h2>
+<p>Bible Peace es una aplicación de referencia bíblica gratuita y con prioridad sin conexión que ofrece acceso a las Escrituras en varios idiomas, un versículo diario, lectura de la Biblia, herramientas de oración y un diario personal. Todo el contenido bíblico se muestra únicamente con fines de referencia personal, educativa y espiritual.</p>
+
+<h2>3. No es asesoramiento profesional — Limitación importante</h2>
+<div class="warning">
+<p><strong>Bible Peace no proporciona asesoramiento médico, psicológico, psiquiátrico, legal, financiero ni ningún otro tipo de asesoramiento profesional.</strong></p>
+<p>Las escrituras, reflexiones y contenidos que se muestran en la App se ofrecen solo como referencia espiritual y educativa general. No sustituyen la consulta profesional. Si está atravesando una crisis de salud mental, una emergencia médica o un asunto legal, contacte de inmediato a un profesional cualificado o a un servicio de emergencia.</p>
+<p><strong>La App no es un servicio de emergencia.</strong> En caso de peligro inmediato para usted u otras personas, contacte ahora a los servicios de emergencia locales (por ejemplo, 911 en EE. UU., 999 en el Reino Unido, 112 en la UE, 119 en Japón, 119 en Corea del Sur).</p>
+</div>
+
+<h2>4. Función "Hablar con la Biblia"</h2>
+<p>La función "Hablar con la Biblia" acepta texto introducido por el usuario y devuelve versículos bíblicos relevantes según palabras clave y temas. Esta función:</p>
+<ul>
+  <li><strong>No</strong> analiza, diagnostica ni responde a estados emocionales o de salud mental</li>
+  <li><strong>No</strong> ofrece consejería, terapia ni dirección espiritual</li>
+  <li>Muestra automáticamente una pantalla de seguridad de emergencia cuando se detectan palabras clave relacionadas con una crisis, en lugar de devolver versículos</li>
+</ul>
+<p>El resultado de esta función es únicamente una referencia bíblica. No es asesoramiento de ningún tipo.</p>
+
+<h2>5. Uso permitido</h2>
+<p>Puede usar la App con fines personales, no comerciales y educativos. No puede:</p>
+<ul>
+  <li>Realizar ingeniería inversa, descompilar o desensamblar la App</li>
+  <li>Usar la App con cualquier fin ilícito</li>
+  <li>Reproducir o redistribuir la App o su contenido sin permiso</li>
+  <li>Atribuirse la autoría de las traducciones bíblicas incluidas en la App</li>
+</ul>
+
+<h2>6. Contenido bíblico y licencias</h2>
+<p>Bible Peace utiliza traducciones de la Biblia que son de dominio público o que cuentan con licencias abiertas. La atribución completa de cada traducción está disponible dentro de la App en "Créditos / Licencias". Términos clave de licencia:</p>
+<ul>
+  <li><strong>World English Bible (WEB)</strong>: "World English Bible" es una marca de eBible.org. El texto es de dominio público.</li>
+  <li><strong>Bíblia Livre (portugués)</strong>: Bajo licencia Creative Commons Atribución 3.0 Brasil (CC BY 3.0 BR). © Diego Santos, Mario Sergio, Marco Teles. <a href="https://creativecommons.org/licenses/by/3.0/br/">Licencia</a></li>
+  <li><strong>개역한글판 (coreano, KRV, 1961)</strong>: Usado bajo la presunción de dominio público, obtenido de repositorios abiertos disponibles públicamente. El estado de dominio público puede variar según la jurisdicción.</li>
+  <li><strong>口語訳聖書 (japonés, 1954/55)</strong>: Usado bajo la presunción de dominio público (plazo de 50 años desde la publicación, vencido en 2005). El estado de dominio público puede variar según la jurisdicción.</li>
+  <li>Todas las demás traducciones son de dominio público en las principales jurisdicciones.</li>
+</ul>
+
+<h2>7. Propiedad intelectual</h2>
+<p>La aplicación Bible Peace, su diseño, código, interfaz de usuario y contenido original escrito (excluyendo el texto bíblico) son propiedad intelectual de Artistic Life Research. Todos los derechos reservados.</p>
+<p>Las fuentes utilizadas en la App (Cormorant Garamond y Lato) están bajo la licencia SIL Open Font License 1.1.</p>
+
+<h2>8. Renuncia de garantías</h2>
+<p>La App se ofrece "tal cual" y "según disponibilidad", sin garantías de ningún tipo, expresas o implícitas, incluidas, entre otras, las de comerciabilidad, idoneidad para un fin determinado, exactitud o no infracción. Artistic Life Research no garantiza que la App esté libre de errores, sea ininterrumpida o esté libre de componentes dañinos.</p>
+
+<h2>9. Limitación de responsabilidad</h2>
+<p>En la máxima medida permitida por la ley aplicable, Artistic Life Research no será responsable de daños indirectos, incidentales, especiales, consecuentes o punitivos, incluidos, entre otros, la pérdida de datos, la pérdida de beneficios o cualquier daño derivado del uso o la imposibilidad de uso de la App.</p>
+<p>Cuando la ley aplicable no permita la exclusión de ciertas garantías o la limitación de responsabilidad, dichas exclusiones o limitaciones se aplicarán solo en la medida máxima permitida por esa ley. Sus derechos legales como consumidor no se ven afectados.</p>
+
+<h2>10. Contenido religioso y espiritual</h2>
+<p>La App presenta textos bíblicos y reflexiones espirituales como referencia personal. El contenido no representa la posición oficial de ninguna denominación, iglesia o institución religiosa. Se da la bienvenida a usuarios de todas las creencias y orígenes. La App no discrimina por motivos de religión, raza, género, nacionalidad ni ninguna otra característica protegida.</p>
+
+<h2>11. Uso por niños y menores</h2>
+<p>Bible Peace está destinada a un público general y no está dirigida ni diseñada para niños. Recomendamos la App para usuarios de 13 años en adelante.</p>
+<p>Si usted es menor de la mayoría de edad en su país o jurisdicción, solo puede usar la App con el consentimiento y la supervisión de un padre, madre o tutor legal. Al permitir que un menor use la App, dicho padre, madre o tutor acepta estos Términos en nombre del menor y asume la responsabilidad por el uso que el menor haga de la App.</p>
+<p>Bible Peace se distribuye en todo el mundo y reconocemos que los menores usan la App en circunstancias culturales, educativas y familiares muy diversas, a veces sin la misma orientación disponible para otros. La App presenta el texto de la Biblia, que incluye pasajes que pueden requerir una comprensión madura o un contexto pastoral. Por ello, animamos encarecidamente a padres, tutores y comunidades de fe a guiar y acompañar a cualquier menor que use la App.</p>
+<p>La App no contiene publicidad, ni funciones sociales o de mensajería, ni contacto entre usuarios, y no tiene contenido externo más allá de los enlaces opcionales de apoyo en crisis y de atribución de las Escrituras. No recopila conscientemente datos personales de ningún usuario, incluidos los menores, y almacena todo el contenido únicamente en el dispositivo del propio usuario.</p>
+<p>Cualquier compra (como la opcional Global Edition) es procesada por la tienda de aplicaciones y requiere la autorización del titular de la cuenta. Los padres y tutores son responsables de supervisar las compras realizadas en sus dispositivos o cuentas.</p>
+
+<h2>12. Privacidad</h2>
+<p>El uso de la App también se rige por nuestra <a href="privacy-policy.html?lang=es">Política de Privacidad</a>, que se incorpora a estos Términos por referencia. La App no recopila, almacena en ningún servidor ni transmite datos personales.</p>
+
+<h2>13. Modificaciones</h2>
+<p>Artistic Life Research se reserva el derecho de actualizar estos Términos en cualquier momento. Los cambios sustanciales se reflejarán mediante una fecha de entrada en vigor actualizada. El uso continuado de la App tras los cambios constituye la aceptación de los Términos revisados.</p>
+
+<h2>14. Ley aplicable y resolución de disputas</h2>
+<p>Estos Términos se rigen por las leyes de Japón. Cualquier disputa que surja de estos Términos o de la App, o que se relacione con ellos, estará sujeta a la jurisdicción exclusiva de los tribunales de Japón. No obstante, si usted es consumidor, esta elección de ley y foro se aplica solo en la medida permitida por las leyes imperativas de protección al consumidor de su país de residencia; cuando dichas leyes dispongan lo contrario, estas prevalecerán y usted podrá iniciar acciones ante los tribunales de su país de residencia.</p>
+
+<div class="region-note">
+<strong>Para consumidores:</strong> Nada en estos Términos limita sus derechos en virtud de las leyes imperativas de protección al consumidor de su país de residencia. Cuando se apliquen tales disposiciones locales imperativas, prevalecerán sobre esta cláusula de ley aplicable independientemente de su ubicación, y usted también podrá presentar reclamaciones ante los tribunales de su país de residencia. Esto se aplica a los consumidores de cualquier jurisdicción, incluidos, entre otros, la Unión Europea y el Espacio Económico Europeo.
+</div>
+
+<h2>15. Contacto y reclamaciones</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  Correo: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
+  Sitio web: <a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
+</div>
+<p style="margin-top:1em;">Para reclamaciones sobre derechos de autor, licencias o contenido, visite nuestro <a href="https://artistic-life-research.com">sitio web</a> o contáctenos directamente. Respondemos en un plazo de 7 días hábiles.</p>
+</div>
+
+<!-- ═══════════════ Português (Portuguese) ═══════════════ -->
+<div class="lang-content" data-lang="pt">
+<h1>Termos de Uso</h1>
+<p class="updated">Data de vigência: 29 de maio de 2026 &nbsp;|&nbsp; App: Bible Peace &nbsp;|&nbsp; Desenvolvedor: Artistic Life Research</p>
+<div class="gov-note">Esta é uma tradução de cortesia. A versão em inglês é a versão juridicamente vinculativa destes Termos; em caso de divergência, prevalece o texto em inglês.</div>
+
+<p>Leia atentamente estes Termos de Uso ("Termos") antes de usar o aplicativo móvel Bible Peace ("App"). Ao baixar ou usar o App, você concorda em ficar vinculado a estes Termos.</p>
+
+<h2>1. Aceitação dos Termos</h2>
+<p>Ao acessar ou usar o Bible Peace, você confirma que tem pelo menos 13 anos (ou a idade de consentimento digital aplicável na sua jurisdição) e que concorda com estes Termos. Se não concordar, não use o App.</p>
+
+<h2>2. Descrição do App</h2>
+<p>O Bible Peace é um aplicativo de referência bíblica gratuito e com prioridade offline que oferece acesso às Escrituras em vários idiomas, um versículo diário, leitura da Bíblia, ferramentas de oração e um diário pessoal. Todo o conteúdo bíblico é exibido apenas para fins de referência pessoal, educacional e espiritual.</p>
+
+<h2>3. Não é aconselhamento profissional — Limitação importante</h2>
+<div class="warning">
+<p><strong>O Bible Peace não fornece aconselhamento médico, psicológico, psiquiátrico, jurídico, financeiro ou qualquer outra forma de aconselhamento profissional.</strong></p>
+<p>As escrituras, reflexões e conteúdos exibidos no App são fornecidos apenas como referência espiritual e educacional geral. Não substituem a consulta profissional. Se você estiver passando por uma crise de saúde mental, emergência médica ou questão jurídica, contate imediatamente um profissional qualificado ou um serviço de emergência.</p>
+<p><strong>O App não é um serviço de emergência.</strong> Em caso de perigo imediato para você ou outras pessoas, contate agora os serviços de emergência locais (por exemplo, 190/192 no Brasil, 911 nos EUA, 999 no Reino Unido, 112 na UE, 119 no Japão, 119 na Coreia do Sul).</p>
+</div>
+
+<h2>4. Recurso "Conversar com a Bíblia"</h2>
+<p>O recurso "Conversar com a Bíblia" aceita texto inserido pelo usuário e retorna versículos bíblicos relevantes com base em palavras-chave e temas. Este recurso:</p>
+<ul>
+  <li><strong>Não</strong> analisa, diagnostica nem responde a estados emocionais ou de saúde mental</li>
+  <li><strong>Não</strong> oferece aconselhamento, terapia ou direção espiritual</li>
+  <li>Exibe automaticamente uma tela de segurança de emergência quando palavras-chave relacionadas a crises são detectadas, em vez de retornar versículos</li>
+</ul>
+<p>O resultado deste recurso é apenas uma referência bíblica. Não é aconselhamento de nenhum tipo.</p>
+
+<h2>5. Uso permitido</h2>
+<p>Você pode usar o App para fins pessoais, não comerciais e educacionais. Você não pode:</p>
+<ul>
+  <li>Fazer engenharia reversa, descompilar ou desmontar o App</li>
+  <li>Usar o App para qualquer finalidade ilícita</li>
+  <li>Reproduzir ou redistribuir o App ou seu conteúdo sem permissão</li>
+  <li>Reivindicar autoria das traduções bíblicas incluídas no App</li>
+</ul>
+
+<h2>6. Conteúdo bíblico e licenças</h2>
+<p>O Bible Peace usa traduções da Bíblia que são de domínio público ou licenciadas sob licenças abertas. A atribuição completa de cada tradução está disponível no App em "Créditos / Licenças". Principais termos de licença:</p>
+<ul>
+  <li><strong>World English Bible (WEB)</strong>: "World English Bible" é uma marca registrada da eBible.org. O texto é de domínio público.</li>
+  <li><strong>Bíblia Livre (português)</strong>: Licenciada sob Creative Commons Atribuição 3.0 Brasil (CC BY 3.0 BR). © Diego Santos, Mario Sergio, Marco Teles. <a href="https://creativecommons.org/licenses/by/3.0/br/">Licença</a></li>
+  <li><strong>개역한글판 (coreano, KRV, 1961)</strong>: Usada sob presunção de domínio público, obtida de repositórios abertos disponíveis publicamente. O status de domínio público pode variar conforme a jurisdição.</li>
+  <li><strong>口語訳聖書 (japonês, 1954/55)</strong>: Usada sob presunção de domínio público (prazo de 50 anos a partir da publicação, expirado em 2005). O status de domínio público pode variar conforme a jurisdição.</li>
+  <li>Todas as demais traduções são de domínio público nas principais jurisdições.</li>
+</ul>
+
+<h2>7. Propriedade intelectual</h2>
+<p>O aplicativo Bible Peace, seu design, código, interface de usuário e conteúdo original escrito (excluindo o texto bíblico) são propriedade intelectual da Artistic Life Research. Todos os direitos reservados.</p>
+<p>As fontes usadas no App (Cormorant Garamond e Lato) são licenciadas sob a SIL Open Font License 1.1.</p>
+
+<h2>8. Isenção de garantias</h2>
+<p>O App é fornecido "no estado em que se encontra" e "conforme disponível", sem garantias de qualquer tipo, expressas ou implícitas, incluindo, entre outras, as de comercialização, adequação a uma finalidade específica, exatidão ou não violação. A Artistic Life Research não garante que o App seja livre de erros, ininterrupto ou livre de componentes nocivos.</p>
+
+<h2>9. Limitação de responsabilidade</h2>
+<p>Na extensão máxima permitida pela lei aplicável, a Artistic Life Research não será responsável por quaisquer danos indiretos, incidentais, especiais, consequenciais ou punitivos, incluindo, entre outros, perda de dados, perda de lucros ou qualquer dano decorrente do uso ou da impossibilidade de uso do App.</p>
+<p>Quando a lei aplicável não permitir a exclusão de certas garantias ou a limitação de responsabilidade, tais exclusões ou limitações se aplicarão apenas na extensão máxima permitida por essa lei. Seus direitos legais como consumidor não são afetados.</p>
+
+<h2>10. Conteúdo religioso e espiritual</h2>
+<p>O App apresenta textos bíblicos e reflexões espirituais como referência pessoal. O conteúdo não representa a posição oficial de qualquer denominação, igreja ou instituição religiosa. Usuários de todas as fés e origens são bem-vindos. O App não discrimina com base em religião, raça, gênero, nacionalidade ou qualquer outra característica protegida.</p>
+
+<h2>11. Uso por crianças e menores</h2>
+<p>O Bible Peace destina-se a um público geral e não é direcionado nem projetado para crianças. Recomendamos o App para usuários a partir de 13 anos.</p>
+<p>Se você for menor da maioridade no seu país ou jurisdição, só poderá usar o App com o consentimento e a supervisão de um pai, mãe ou responsável legal. Ao permitir que um menor use o App, esse pai, mãe ou responsável aceita estes Termos em nome do menor e assume a responsabilidade pelo uso que o menor fizer do App.</p>
+<p>O Bible Peace é distribuído mundialmente, e reconhecemos que menores usam o App em circunstâncias culturais, educacionais e familiares muito diversas, às vezes sem a mesma orientação disponível para outros. O App apresenta o texto da Bíblia, que inclui passagens que podem exigir compreensão madura ou contexto pastoral. Por isso, incentivamos fortemente pais, responsáveis e comunidades de fé a orientar e acompanhar qualquer menor que use o App.</p>
+<p>O App não contém publicidade, nem funções sociais ou de mensagens, nem contato entre usuários, e não possui conteúdo externo além dos links opcionais de apoio em crise e de atribuição das Escrituras. Não coleta intencionalmente dados pessoais de nenhum usuário, incluindo menores, e armazena todo o conteúdo apenas no próprio dispositivo do usuário.</p>
+<p>Qualquer compra (como a opcional Global Edition) é processada pela loja de aplicativos e exige autorização do titular da conta. Pais e responsáveis são responsáveis por supervisionar as compras feitas em seus dispositivos ou contas.</p>
+
+<h2>12. Privacidade</h2>
+<p>O uso do App também é regido por nossa <a href="privacy-policy.html?lang=pt">Política de Privacidade</a>, que é incorporada a estes Termos por referência. O App não coleta, armazena em nenhum servidor nem transmite dados pessoais.</p>
+
+<h2>13. Modificações</h2>
+<p>A Artistic Life Research reserva-se o direito de atualizar estes Termos a qualquer momento. Alterações substanciais serão refletidas por uma data de vigência atualizada. O uso contínuo do App após as alterações constitui aceitação dos Termos revisados.</p>
+
+<h2>14. Lei aplicável e resolução de disputas</h2>
+<p>Estes Termos são regidos pelas leis do Japão. Qualquer disputa decorrente destes Termos ou do App, ou a eles relacionada, estará sujeita à jurisdição exclusiva dos tribunais do Japão. No entanto, se você for consumidor, esta escolha de lei e foro aplica-se apenas na medida permitida pelas leis imperativas de proteção ao consumidor do seu país de residência; quando tais leis dispuserem de outra forma, estas prevalecerão e você poderá iniciar processos nos tribunais do seu país de residência.</p>
+
+<div class="region-note">
+<strong>Para consumidores:</strong> Nada nestes Termos limita seus direitos sob as leis imperativas de proteção ao consumidor do seu país de residência. Quando tais disposições locais imperativas se aplicarem, prevalecerão sobre esta cláusula de lei aplicável independentemente da sua localização, e você também poderá apresentar reclamações nos tribunais do seu país de residência. Isto se aplica a consumidores de qualquer jurisdição, incluindo, sem limitação, a União Europeia e o Espaço Econômico Europeu.
+</div>
+
+<h2>15. Contato e reclamações</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  E-mail: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
+  Site: <a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
+</div>
+<p style="margin-top:1em;">Para reclamações sobre direitos autorais, licenças ou conteúdo, visite nosso <a href="https://artistic-life-research.com">site</a> ou entre em contato diretamente. Respondemos em até 7 dias úteis.</p>
+</div>
+
+<!-- ═══════════════ Français (French) ═══════════════ -->
+<div class="lang-content" data-lang="fr">
+<h1>Conditions d’utilisation</h1>
+<p class="updated">Date d’entrée en vigueur : 29 mai 2026 &nbsp;|&nbsp; App : Bible Peace &nbsp;|&nbsp; Développeur : Artistic Life Research</p>
+<div class="gov-note">Ceci est une traduction de courtoisie. La version anglaise est la version juridiquement contraignante des présentes Conditions ; en cas de divergence, le texte anglais prévaut.</div>
+
+<p>Veuillez lire attentivement ces Conditions d’utilisation (« Conditions ») avant d’utiliser l’application mobile Bible Peace (« l’App »). En téléchargeant ou en utilisant l’App, vous acceptez d’être lié par ces Conditions.</p>
+
+<h2>1. Acceptation des Conditions</h2>
+<p>En accédant à Bible Peace ou en l’utilisant, vous confirmez avoir au moins 13 ans (ou l’âge du consentement numérique applicable dans votre juridiction) et accepter ces Conditions. Si vous n’êtes pas d’accord, n’utilisez pas l’App.</p>
+
+<h2>2. Description de l’App</h2>
+<p>Bible Peace est une application de référence biblique gratuite et privilégiant le hors-ligne, qui donne accès aux Écritures en plusieurs langues, à un verset quotidien, à la lecture de la Bible, à des outils de prière et à un journal personnel. Tout le contenu biblique est affiché uniquement à des fins de référence personnelle, éducative et spirituelle.</p>
+
+<h2>3. Pas un conseil professionnel — Limitation importante</h2>
+<div class="warning">
+<p><strong>Bible Peace ne fournit aucun conseil médical, psychologique, psychiatrique, juridique, financier ou toute autre forme de conseil professionnel.</strong></p>
+<p>Les Écritures, réflexions et contenus affichés dans l’App sont fournis uniquement à titre de référence spirituelle et éducative générale. Ils ne remplacent pas une consultation professionnelle. Si vous traversez une crise de santé mentale, une urgence médicale ou une question juridique, contactez immédiatement un professionnel qualifié ou un service d’urgence.</p>
+<p><strong>L’App n’est pas un service d’urgence.</strong> En cas de danger immédiat pour vous-même ou pour autrui, contactez maintenant les services d’urgence locaux (par exemple, 112 dans l’UE, 911 aux États-Unis, 999 au Royaume-Uni, 119 au Japon, 119 en Corée du Sud).</p>
+</div>
+
+<h2>4. Fonction « Parler avec la Bible »</h2>
+<p>La fonction « Parler avec la Bible » accepte un texte saisi par l’utilisateur et renvoie des versets bibliques pertinents en fonction de mots-clés et de thèmes. Cette fonction :</p>
+<ul>
+  <li><strong>N’analyse pas</strong>, ne diagnostique pas et ne répond pas aux états émotionnels ou de santé mentale</li>
+  <li><strong>Ne fournit pas</strong> de conseil, de thérapie ou de direction spirituelle</li>
+  <li>Affiche automatiquement un écran de sécurité d’urgence lorsque des mots-clés liés à une crise sont détectés, au lieu de renvoyer des versets</li>
+</ul>
+<p>Le résultat de cette fonction est uniquement une référence biblique. Ce n’est en aucun cas un conseil.</p>
+
+<h2>5. Utilisation autorisée</h2>
+<p>Vous pouvez utiliser l’App à des fins personnelles, non commerciales et éducatives. Vous ne pouvez pas :</p>
+<ul>
+  <li>Faire de l’ingénierie inverse, décompiler ou désassembler l’App</li>
+  <li>Utiliser l’App à des fins illégales</li>
+  <li>Reproduire ou redistribuer l’App ou son contenu sans autorisation</li>
+  <li>Revendiquer la paternité des traductions bibliques incluses dans l’App</li>
+</ul>
+
+<h2>6. Contenu biblique et licences</h2>
+<p>Bible Peace utilise des traductions de la Bible qui sont dans le domaine public ou sous licence ouverte. L’attribution complète de chaque traduction est disponible dans l’App sous « Crédits / Licences ». Principaux termes de licence :</p>
+<ul>
+  <li><strong>World English Bible (WEB)</strong> : « World English Bible » est une marque d’eBible.org. Le texte est dans le domaine public.</li>
+  <li><strong>Bíblia Livre (portugais)</strong> : Sous licence Creative Commons Attribution 3.0 Brésil (CC BY 3.0 BR). © Diego Santos, Mario Sergio, Marco Teles. <a href="https://creativecommons.org/licenses/by/3.0/br/">Licence</a></li>
+  <li><strong>개역한글판 (coréen, KRV, 1961)</strong> : Utilisé sous présomption de domaine public, provenant de dépôts ouverts accessibles au public. Le statut de domaine public peut varier selon la juridiction.</li>
+  <li><strong>口語訳聖書 (japonais, 1954/55)</strong> : Utilisé sous présomption de domaine public (durée de 50 ans à compter de la publication, expirée en 2005). Le statut de domaine public peut varier selon la juridiction.</li>
+  <li>Toutes les autres traductions sont dans le domaine public dans les principales juridictions.</li>
+</ul>
+
+<h2>7. Propriété intellectuelle</h2>
+<p>L’application Bible Peace, sa conception, son code, son interface utilisateur et son contenu écrit original (à l’exclusion du texte biblique) sont la propriété intellectuelle d’Artistic Life Research. Tous droits réservés.</p>
+<p>Les polices utilisées dans l’App (Cormorant Garamond et Lato) sont sous licence SIL Open Font License 1.1.</p>
+
+<h2>8. Exclusion de garanties</h2>
+<p>L’App est fournie « telle quelle » et « selon disponibilité », sans garantie d’aucune sorte, expresse ou implicite, y compris, sans s’y limiter, les garanties de qualité marchande, d’adéquation à un usage particulier, d’exactitude ou d’absence de contrefaçon. Artistic Life Research ne garantit pas que l’App sera exempte d’erreurs, ininterrompue ou exempte de composants nuisibles.</p>
+
+<h2>9. Limitation de responsabilité</h2>
+<p>Dans toute la mesure permise par la loi applicable, Artistic Life Research ne saurait être tenue responsable de tout dommage indirect, accessoire, spécial, consécutif ou punitif, y compris, sans s’y limiter, la perte de données, la perte de profits ou tout préjudice résultant de votre utilisation ou de votre incapacité à utiliser l’App.</p>
+<p>Lorsque la loi applicable ne permet pas l’exclusion de certaines garanties ou la limitation de responsabilité, ces exclusions ou limitations ne s’appliquent que dans la mesure maximale permise par cette loi. Vos droits légaux en tant que consommateur ne sont pas affectés.</p>
+
+<h2>10. Contenu religieux et spirituel</h2>
+<p>L’App présente des textes bibliques et des réflexions spirituelles à titre de référence personnelle. Le contenu ne représente la position officielle d’aucune confession, église ou institution religieuse. Les utilisateurs de toutes confessions et de tous horizons sont les bienvenus. L’App n’exerce aucune discrimination fondée sur la religion, la race, le genre, la nationalité ou toute autre caractéristique protégée.</p>
+
+<h2>11. Utilisation par les enfants et les mineurs</h2>
+<p>Bible Peace s’adresse à un public général et n’est ni destinée ni conçue pour les enfants. Nous recommandons l’App aux utilisateurs âgés de 13 ans et plus.</p>
+<p>Si vous n’avez pas atteint l’âge de la majorité dans votre pays ou juridiction, vous ne pouvez utiliser l’App qu’avec le consentement et sous la surveillance d’un parent ou tuteur légal. En autorisant un mineur à utiliser l’App, ce parent ou tuteur accepte les présentes Conditions au nom du mineur et assume la responsabilité de l’utilisation de l’App par celui-ci.</p>
+<p>Bible Peace est distribuée dans le monde entier, et nous reconnaissons que des mineurs utilisent l’App dans des contextes culturels, éducatifs et familiaux très divers, parfois sans bénéficier du même accompagnement que d’autres. L’App présente le texte de la Bible, qui comprend des passages pouvant nécessiter une compréhension mûre ou un contexte pastoral. C’est pourquoi nous encourageons vivement les parents, les tuteurs et les communautés de foi à guider et à accompagner tout mineur qui utilise l’App.</p>
+<p>L’App ne contient aucune publicité, aucune fonction sociale ou de messagerie, ni aucun contact entre utilisateurs, et elle n’a aucun contenu externe en dehors des liens facultatifs d’aide en cas de crise et d’attribution des Écritures. Elle ne collecte sciemment aucune donnée personnelle d’aucun utilisateur, y compris les mineurs, et stocke tout le contenu uniquement sur l’appareil de l’utilisateur.</p>
+<p>Tout achat (comme la Global Edition facultative) est traité par la boutique d’applications et nécessite l’autorisation du titulaire du compte. Les parents et tuteurs sont responsables de la surveillance des achats effectués sur leurs appareils ou comptes.</p>
+
+<h2>12. Confidentialité</h2>
+<p>Votre utilisation de l’App est également régie par notre <a href="privacy-policy.html?lang=fr">Politique de confidentialité</a>, qui est incorporée aux présentes Conditions par référence. L’App ne collecte, ne stocke sur aucun serveur ni ne transmet de données personnelles.</p>
+
+<h2>13. Modifications</h2>
+<p>Artistic Life Research se réserve le droit de mettre à jour ces Conditions à tout moment. Les modifications importantes seront reflétées par une date d’entrée en vigueur mise à jour. L’utilisation continue de l’App après les modifications constitue l’acceptation des Conditions révisées.</p>
+
+<h2>14. Loi applicable et résolution des litiges</h2>
+<p>Les présentes Conditions sont régies par les lois du Japon. Tout litige découlant des présentes Conditions ou de l’App, ou s’y rapportant, relève de la compétence exclusive des tribunaux du Japon. Toutefois, si vous êtes un consommateur, ce choix de loi et de juridiction ne s’applique que dans la mesure permise par les lois impératives de protection des consommateurs de votre pays de résidence ; lorsque ces lois en disposent autrement, elles prévalent et vous pouvez engager une procédure devant les tribunaux de votre pays de résidence.</p>
+
+<div class="region-note">
+<strong>Pour les consommateurs :</strong> Rien dans les présentes Conditions ne limite vos droits au titre des lois impératives de protection des consommateurs de votre pays de résidence. Lorsque de telles dispositions locales impératives s’appliquent, elles prévalent sur la présente clause de loi applicable quel que soit votre lieu de résidence, et vous pouvez également porter vos réclamations devant les tribunaux de votre pays de résidence. Ceci s’applique aux consommateurs de toute juridiction, y compris, sans s’y limiter, l’Union européenne et l’Espace économique européen.
+</div>
+
+<h2>15. Contact et réclamations</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  E-mail : <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
+  Site web : <a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
+</div>
+<p style="margin-top:1em;">Pour toute réclamation concernant les droits d’auteur, les licences ou le contenu, consultez notre <a href="https://artistic-life-research.com">site web</a> ou contactez-nous directement. Nous répondons sous 7 jours ouvrables.</p>
+</div>
+
+<!-- ═══════════════ Deutsch (German) ═══════════════ -->
+<div class="lang-content" data-lang="de">
+<h1>Nutzungsbedingungen</h1>
+<p class="updated">Datum des Inkrafttretens: 29. Mai 2026 &nbsp;|&nbsp; App: Bible Peace &nbsp;|&nbsp; Entwickler: Artistic Life Research</p>
+<div class="gov-note">Dies ist eine Übersetzung zur Erleichterung. Die englische Fassung ist die rechtlich verbindliche Fassung dieser Bedingungen; bei Abweichungen hat der englische Text Vorrang.</div>
+
+<p>Bitte lesen Sie diese Nutzungsbedingungen („Bedingungen“) sorgfältig durch, bevor Sie die mobile Anwendung Bible Peace („App“) verwenden. Mit dem Herunterladen oder Verwenden der App erklären Sie sich mit diesen Bedingungen einverstanden.</p>
+
+<h2>1. Annahme der Bedingungen</h2>
+<p>Mit dem Zugriff auf Bible Peace oder dessen Nutzung bestätigen Sie, dass Sie mindestens 13 Jahre alt sind (oder das in Ihrer Rechtsordnung geltende Alter der digitalen Einwilligung erreicht haben) und diesen Bedingungen zustimmen. Wenn Sie nicht einverstanden sind, nutzen Sie die App nicht.</p>
+
+<h2>2. Beschreibung der App</h2>
+<p>Bible Peace ist eine kostenlose, offline-orientierte Bibel-Referenz-App, die Zugang zu biblischen Texten in mehreren Sprachen, einen Tagesvers, Bibellektüre, Gebetswerkzeuge und ein persönliches Tagebuch bietet. Alle biblischen Inhalte werden ausschließlich zu persönlichen, bildenden und spirituellen Referenzzwecken angezeigt.</p>
+
+<h2>3. Keine professionelle Beratung — Wichtige Einschränkung</h2>
+<div class="warning">
+<p><strong>Bible Peace bietet keine medizinische, psychologische, psychiatrische, rechtliche, finanzielle oder sonstige Form professioneller Beratung.</strong></p>
+<p>Die in der App angezeigten Schriftstellen, Betrachtungen und Inhalte dienen ausschließlich der allgemeinen geistlichen und bildenden Referenz. Sie ersetzen keine professionelle Beratung. Wenn Sie sich in einer psychischen Krise, einem medizinischen Notfall oder einer rechtlichen Angelegenheit befinden, wenden Sie sich bitte unverzüglich an eine qualifizierte Fachkraft oder einen Notdienst.</p>
+<p><strong>Die App ist kein Notdienst.</strong> Bei unmittelbarer Gefahr für Sie selbst oder andere wenden Sie sich jetzt an die örtlichen Notdienste (z. B. 112 in der EU, 911 in den USA, 999 im Vereinigten Königreich, 119 in Japan, 119 in Südkorea).</p>
+</div>
+
+<h2>4. Funktion „Mit der Bibel sprechen“</h2>
+<p>Die Funktion „Mit der Bibel sprechen“ nimmt vom Nutzer eingegebenen Text entgegen und gibt anhand von Schlüsselwörtern und Themen passende Bibelverse zurück. Diese Funktion:</p>
+<ul>
+  <li>analysiert, diagnostiziert oder reagiert <strong>nicht</strong> auf emotionale oder psychische Zustände</li>
+  <li>bietet <strong>keine</strong> Beratung, Therapie oder geistliche Leitung</li>
+  <li>zeigt automatisch einen Notfall-Sicherheitsbildschirm an, wenn krisenbezogene Schlüsselwörter erkannt werden, anstatt Bibelverse zurückzugeben</li>
+</ul>
+<p>Das Ergebnis dieser Funktion ist ausschließlich eine Bibelstelle. Es ist in keiner Weise eine Beratung.</p>
+
+<h2>5. Zulässige Nutzung</h2>
+<p>Sie dürfen die App zu persönlichen, nicht-kommerziellen und bildenden Zwecken nutzen. Sie dürfen nicht:</p>
+<ul>
+  <li>die App zurückentwickeln, dekompilieren oder disassemblieren</li>
+  <li>die App für rechtswidrige Zwecke nutzen</li>
+  <li>die App oder ihre Inhalte ohne Erlaubnis vervielfältigen oder weiterverbreiten</li>
+  <li>die Urheberschaft an den in der App enthaltenen Bibelübersetzungen beanspruchen</li>
+</ul>
+
+<h2>6. Bibelinhalte und Lizenzen</h2>
+<p>Bible Peace verwendet Bibelübersetzungen, die gemeinfrei oder unter offenen Lizenzen lizenziert sind. Die vollständige Quellenangabe für jede Übersetzung finden Sie in der App unter „Credits / Lizenzen“. Wichtige Lizenzbedingungen:</p>
+<ul>
+  <li><strong>World English Bible (WEB)</strong>: „World English Bible“ ist eine Marke von eBible.org. Der Text ist gemeinfrei.</li>
+  <li><strong>Bíblia Livre (Portugiesisch)</strong>: Lizenziert unter Creative Commons Namensnennung 3.0 Brasilien (CC BY 3.0 BR). © Diego Santos, Mario Sergio, Marco Teles. <a href="https://creativecommons.org/licenses/by/3.0/br/">Lizenz</a></li>
+  <li><strong>개역한글판 (Koreanisch, KRV, 1961)</strong>: Verwendet unter der Annahme der Gemeinfreiheit, bezogen aus öffentlich zugänglichen offenen Repositorien. Der Status der Gemeinfreiheit kann je nach Rechtsordnung variieren.</li>
+  <li><strong>口語訳聖書 (Japanisch, 1954/55)</strong>: Verwendet unter der Annahme der Gemeinfreiheit (50-Jahres-Frist ab Veröffentlichung, 2005 abgelaufen). Der Status der Gemeinfreiheit kann je nach Rechtsordnung variieren.</li>
+  <li>Alle übrigen Übersetzungen sind in den wichtigsten Rechtsordnungen gemeinfrei.</li>
+</ul>
+
+<h2>7. Geistiges Eigentum</h2>
+<p>Die Anwendung Bible Peace, ihr Design, ihr Code, ihre Benutzeroberfläche und ihre originären schriftlichen Inhalte (mit Ausnahme des Bibeltextes) sind geistiges Eigentum von Artistic Life Research. Alle Rechte vorbehalten.</p>
+<p>Die in der App verwendeten Schriftarten (Cormorant Garamond und Lato) sind unter der SIL Open Font License 1.1 lizenziert.</p>
+
+<h2>8. Gewährleistungsausschluss</h2>
+<p>Die App wird „wie besehen“ und „wie verfügbar“ bereitgestellt, ohne jegliche ausdrückliche oder stillschweigende Gewährleistung, einschließlich, aber nicht beschränkt auf die Gewährleistung der Marktgängigkeit, der Eignung für einen bestimmten Zweck, der Richtigkeit oder der Nichtverletzung von Rechten. Artistic Life Research gewährleistet nicht, dass die App fehlerfrei, ununterbrochen oder frei von schädlichen Komponenten ist.</p>
+
+<h2>9. Haftungsbeschränkung</h2>
+<p>Soweit nach geltendem Recht zulässig, haftet Artistic Life Research nicht für indirekte, zufällige, besondere, Folge- oder Strafschäden, einschließlich, aber nicht beschränkt auf Datenverlust, entgangenen Gewinn oder Schäden, die sich aus Ihrer Nutzung oder der Unmöglichkeit der Nutzung der App ergeben.</p>
+<p>Soweit das geltende Recht den Ausschluss bestimmter Gewährleistungen oder die Haftungsbeschränkung nicht zulässt, gelten diese Ausschlüsse oder Beschränkungen nur im größtmöglichen gesetzlich zulässigen Umfang. Ihre gesetzlichen Rechte als Verbraucher bleiben unberührt.</p>
+
+<h2>10. Religiöse und spirituelle Inhalte</h2>
+<p>Die App präsentiert Bibeltexte und geistliche Betrachtungen als persönliche Referenz. Die Inhalte geben nicht die offizielle Position einer Konfession, Kirche oder religiösen Institution wieder. Nutzer aller Glaubensrichtungen und Hintergründe sind willkommen. Die App diskriminiert nicht aufgrund von Religion, Rasse, Geschlecht, Nationalität oder einem anderen geschützten Merkmal.</p>
+
+<h2>11. Nutzung durch Kinder und Minderjährige</h2>
+<p>Bible Peace richtet sich an ein allgemeines Publikum und ist weder für Kinder bestimmt noch für sie gestaltet. Wir empfehlen die App für Nutzer ab 13 Jahren.</p>
+<p>Wenn Sie das Volljährigkeitsalter in Ihrem Land oder Ihrer Rechtsordnung noch nicht erreicht haben, dürfen Sie die App nur mit Einwilligung und unter Aufsicht eines Elternteils oder gesetzlichen Vormunds nutzen. Indem ein Elternteil oder Vormund einem Minderjährigen die Nutzung der App gestattet, stimmt diese Person diesen Bedingungen im Namen des Minderjährigen zu und übernimmt die Verantwortung für dessen Nutzung der App.</p>
+<p>Bible Peace wird weltweit vertrieben, und wir sind uns bewusst, dass Minderjährige die App unter sehr unterschiedlichen kulturellen, bildungsbezogenen und familiären Umständen nutzen, mitunter ohne die gleiche Begleitung wie andere. Die App zeigt den Text der Bibel, der Stellen enthält, die ein reifes Verständnis oder einen seelsorgerlichen Kontext erfordern können. Daher ermutigen wir Eltern, Erziehungsberechtigte und Glaubensgemeinschaften nachdrücklich, jeden Minderjährigen, der die App nutzt, zu begleiten und anzuleiten.</p>
+<p>Die App enthält keine Werbung, keine sozialen oder Messaging-Funktionen und keinen Kontakt zwischen Nutzern und hat keine externen Inhalte außer den optionalen Links zu Krisenhilfe und Bibelquellenangaben. Sie erhebt wissentlich keine personenbezogenen Daten von Nutzern, einschließlich Minderjähriger, und speichert alle Inhalte ausschließlich auf dem Gerät des Nutzers.</p>
+<p>Jeder Kauf (etwa die optionale Global Edition) wird vom App-Store abgewickelt und erfordert die Autorisierung durch den Kontoinhaber. Eltern und Erziehungsberechtigte sind dafür verantwortlich, Käufe zu beaufsichtigen, die über ihre Geräte oder Konten getätigt werden.</p>
+
+<h2>12. Datenschutz</h2>
+<p>Ihre Nutzung der App unterliegt auch unserer <a href="privacy-policy.html?lang=de">Datenschutzerklärung</a>, die durch Verweis Bestandteil dieser Bedingungen ist. Die App erhebt, speichert auf keinem Server und übermittelt keine personenbezogenen Daten.</p>
+
+<h2>13. Änderungen</h2>
+<p>Artistic Life Research behält sich das Recht vor, diese Bedingungen jederzeit zu aktualisieren. Wesentliche Änderungen werden durch ein aktualisiertes Datum des Inkrafttretens kenntlich gemacht. Die fortgesetzte Nutzung der App nach Änderungen gilt als Annahme der überarbeiteten Bedingungen.</p>
+
+<h2>14. Anwendbares Recht und Streitbeilegung</h2>
+<p>Diese Bedingungen unterliegen dem Recht Japans. Alle Streitigkeiten, die sich aus diesen Bedingungen oder der App ergeben oder damit zusammenhängen, unterliegen der ausschließlichen Zuständigkeit der Gerichte Japans. Wenn Sie jedoch Verbraucher sind, gilt diese Rechts- und Gerichtsstandswahl nur insoweit, als sie nach den zwingenden Verbraucherschutzgesetzen Ihres Wohnsitzlandes zulässig ist; wo diese Gesetze etwas anderes vorsehen, gehen sie vor, und Sie können Verfahren vor den Gerichten Ihres Wohnsitzlandes anstrengen.</p>
+
+<div class="region-note">
+<strong>Für Verbraucher:</strong> Nichts in diesen Bedingungen beschränkt Ihre Rechte nach den zwingenden Verbraucherschutzgesetzen Ihres Wohnsitzlandes. Wo solche zwingenden lokalen Bestimmungen gelten, haben sie unabhängig von Ihrem Standort Vorrang vor dieser Rechtswahlklausel, und Sie können Ansprüche auch vor den Gerichten Ihres Wohnsitzlandes geltend machen. Dies gilt für Verbraucher in jeder Rechtsordnung, einschließlich, aber nicht beschränkt auf die Europäische Union und den Europäischen Wirtschaftsraum.
+</div>
+
+<h2>15. Kontakt und Beschwerden</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  E-Mail: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
+  Website: <a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
+</div>
+<p style="margin-top:1em;">Bei Beschwerden zu Urheberrecht, Lizenzen oder Inhalten besuchen Sie bitte unsere <a href="https://artistic-life-research.com">Website</a> oder kontaktieren Sie uns direkt. Wir antworten innerhalb von 7 Werktagen.</p>
+</div>
+
+<!-- ═══════════════ Italiano (Italian) ═══════════════ -->
+<div class="lang-content" data-lang="it">
+<h1>Condizioni d’uso</h1>
+<p class="updated">Data di entrata in vigore: 29 maggio 2026 &nbsp;|&nbsp; App: Bible Peace &nbsp;|&nbsp; Sviluppatore: Artistic Life Research</p>
+<div class="gov-note">Questa è una traduzione di cortesia. La versione inglese è la versione giuridicamente vincolante delle presenti Condizioni; in caso di discrepanza, prevale il testo inglese.</div>
+
+<p>Leggere attentamente queste Condizioni d’uso (« Condizioni ») prima di utilizzare l’applicazione mobile Bible Peace (« App »). Scaricando o utilizzando l’App, l’utente accetta di essere vincolato dalle presenti Condizioni.</p>
+
+<h2>1. Accettazione delle Condizioni</h2>
+<p>Accedendo a Bible Peace o utilizzandola, l’utente conferma di avere almeno 13 anni (o l’età del consenso digitale applicabile nella propria giurisdizione) e di accettare le presenti Condizioni. In caso di disaccordo, non utilizzare l’App.</p>
+
+<h2>2. Descrizione dell’App</h2>
+<p>Bible Peace è un’applicazione di riferimento biblico gratuita e orientata all’uso offline che offre accesso alle Scritture in più lingue, un versetto giornaliero, la lettura della Bibbia, strumenti di preghiera e un diario personale. Tutti i contenuti biblici sono mostrati esclusivamente a scopo di riferimento personale, educativo e spirituale.</p>
+
+<h2>3. Non è una consulenza professionale — Limitazione importante</h2>
+<div class="warning">
+<p><strong>Bible Peace non fornisce consulenza medica, psicologica, psichiatrica, legale, finanziaria o qualsiasi altra forma di consulenza professionale.</strong></p>
+<p>Le Scritture, le riflessioni e i contenuti mostrati nell’App sono forniti solo come riferimento spirituale ed educativo generale. Non sostituiscono una consulenza professionale. Se stai affrontando una crisi di salute mentale, un’emergenza medica o una questione legale, contatta immediatamente un professionista qualificato o un servizio di emergenza.</p>
+<p><strong>L’App non è un servizio di emergenza.</strong> In caso di pericolo immediato per te o per altri, contatta ora i servizi di emergenza locali (ad esempio 112 nell’UE, 911 negli USA, 999 nel Regno Unito, 119 in Giappone, 119 in Corea del Sud).</p>
+</div>
+
+<h2>4. Funzione « Parla con la Bibbia »</h2>
+<p>La funzione « Parla con la Bibbia » accetta il testo inserito dall’utente e restituisce versetti biblici pertinenti in base a parole chiave e temi. Questa funzione:</p>
+<ul>
+  <li><strong>Non</strong> analizza, diagnostica né risponde a stati emotivi o di salute mentale</li>
+  <li><strong>Non</strong> fornisce consulenza, terapia o direzione spirituale</li>
+  <li>Mostra automaticamente una schermata di sicurezza di emergenza quando vengono rilevate parole chiave legate a una crisi, invece di restituire versetti</li>
+</ul>
+<p>Il risultato di questa funzione è solo un riferimento biblico. Non è una consulenza di alcun tipo.</p>
+
+<h2>5. Uso consentito</h2>
+<p>È possibile utilizzare l’App per scopi personali, non commerciali ed educativi. Non è consentito:</p>
+<ul>
+  <li>Decodificare, decompilare o disassemblare l’App</li>
+  <li>Utilizzare l’App per qualsiasi scopo illecito</li>
+  <li>Riprodurre o ridistribuire l’App o i suoi contenuti senza autorizzazione</li>
+  <li>Rivendicare la paternità delle traduzioni bibliche incluse nell’App</li>
+</ul>
+
+<h2>6. Contenuti biblici e licenze</h2>
+<p>Bible Peace utilizza traduzioni della Bibbia di pubblico dominio o concesse in licenza aperta. L’attribuzione completa di ciascuna traduzione è disponibile nell’App in « Crediti / Licenze ». Termini principali di licenza:</p>
+<ul>
+  <li><strong>World English Bible (WEB)</strong>: « World English Bible » è un marchio di eBible.org. Il testo è di pubblico dominio.</li>
+  <li><strong>Bíblia Livre (portoghese)</strong>: Concessa in licenza Creative Commons Attribuzione 3.0 Brasile (CC BY 3.0 BR). © Diego Santos, Mario Sergio, Marco Teles. <a href="https://creativecommons.org/licenses/by/3.0/br/">Licenza</a></li>
+  <li><strong>개역한글판 (coreano, KRV, 1961)</strong>: Utilizzato in base alla presunzione di pubblico dominio, ottenuto da repository aperti disponibili pubblicamente. Lo stato di pubblico dominio può variare a seconda della giurisdizione.</li>
+  <li><strong>口語訳聖書 (giapponese, 1954/55)</strong>: Utilizzato in base alla presunzione di pubblico dominio (termine di 50 anni dalla pubblicazione, scaduto nel 2005). Lo stato di pubblico dominio può variare a seconda della giurisdizione.</li>
+  <li>Tutte le altre traduzioni sono di pubblico dominio nelle principali giurisdizioni.</li>
+</ul>
+
+<h2>7. Proprietà intellettuale</h2>
+<p>L’applicazione Bible Peace, il suo design, il codice, l’interfaccia utente e i contenuti scritti originali (escluso il testo biblico) sono proprietà intellettuale di Artistic Life Research. Tutti i diritti riservati.</p>
+<p>I caratteri tipografici utilizzati nell’App (Cormorant Garamond e Lato) sono concessi in licenza SIL Open Font License 1.1.</p>
+
+<h2>8. Esclusione di garanzie</h2>
+<p>L’App è fornita « così com’è » e « come disponibile », senza garanzie di alcun tipo, esplicite o implicite, incluse, a titolo esemplificativo, le garanzie di commerciabilità, idoneità a uno scopo particolare, accuratezza o non violazione. Artistic Life Research non garantisce che l’App sia priva di errori, ininterrotta o priva di componenti dannosi.</p>
+
+<h2>9. Limitazione di responsabilità</h2>
+<p>Nella misura massima consentita dalla legge applicabile, Artistic Life Research non sarà responsabile per danni indiretti, incidentali, speciali, consequenziali o punitivi, inclusi, a titolo esemplificativo, perdita di dati, perdita di profitti o qualsiasi danno derivante dall’uso o dall’impossibilità di utilizzare l’App.</p>
+<p>Laddove la legge applicabile non consenta l’esclusione di determinate garanzie o la limitazione di responsabilità, tali esclusioni o limitazioni si applicano solo nella misura massima consentita da tale legge. I tuoi diritti legali come consumatore non sono pregiudicati.</p>
+
+<h2>10. Contenuti religiosi e spirituali</h2>
+<p>L’App presenta testi biblici e riflessioni spirituali come riferimento personale. I contenuti non rappresentano la posizione ufficiale di alcuna confessione, chiesa o istituzione religiosa. Sono benvenuti utenti di ogni fede e provenienza. L’App non discrimina in base a religione, razza, genere, nazionalità o qualsiasi altra caratteristica protetta.</p>
+
+<h2>11. Uso da parte di bambini e minori</h2>
+<p>Bible Peace è destinata a un pubblico generale e non è rivolta né progettata per i bambini. Consigliamo l’App per utenti di età pari o superiore a 13 anni.</p>
+<p>Se non hai raggiunto la maggiore età nel tuo paese o giurisdizione, puoi usare l’App solo con il consenso e sotto la supervisione di un genitore o tutore legale. Consentendo a un minore di usare l’App, tale genitore o tutore accetta le presenti Condizioni per conto del minore e si assume la responsabilità dell’uso dell’App da parte del minore.</p>
+<p>Bible Peace è distribuita in tutto il mondo e riconosciamo che i minori usano l’App in contesti culturali, educativi e familiari molto diversi, talvolta senza la stessa guida disponibile per altri. L’App presenta il testo della Bibbia, che include passaggi che possono richiedere una comprensione matura o un contesto pastorale. Per questo incoraggiamo vivamente genitori, tutori e comunità di fede a guidare e accompagnare ogni minore che usa l’App.</p>
+<p>L’App non contiene pubblicità, né funzioni social o di messaggistica, né contatto tra utenti, e non ha contenuti esterni oltre ai link facoltativi di supporto in caso di crisi e di attribuzione delle Scritture. Non raccoglie consapevolmente dati personali da alcun utente, inclusi i minori, e memorizza tutti i contenuti solo sul dispositivo dell’utente.</p>
+<p>Qualsiasi acquisto (come la Global Edition facoltativa) è elaborato dallo store delle app e richiede l’autorizzazione del titolare dell’account. I genitori e i tutori sono responsabili della supervisione degli acquisti effettuati sui loro dispositivi o account.</p>
+
+<h2>12. Privacy</h2>
+<p>L’uso dell’App è regolato anche dalla nostra <a href="privacy-policy.html?lang=it">Informativa sulla privacy</a>, che è incorporata nelle presenti Condizioni mediante riferimento. L’App non raccoglie, non memorizza su alcun server né trasmette dati personali.</p>
+
+<h2>13. Modifiche</h2>
+<p>Artistic Life Research si riserva il diritto di aggiornare le presenti Condizioni in qualsiasi momento. Le modifiche sostanziali saranno indicate da una data di entrata in vigore aggiornata. L’uso continuato dell’App dopo le modifiche costituisce accettazione delle Condizioni riviste.</p>
+
+<h2>14. Legge applicabile e risoluzione delle controversie</h2>
+<p>Le presenti Condizioni sono regolate dalle leggi del Giappone. Qualsiasi controversia derivante dalle presenti Condizioni o dall’App, o ad esse correlata, è soggetta alla giurisdizione esclusiva dei tribunali del Giappone. Tuttavia, se sei un consumatore, questa scelta di legge e foro si applica solo nella misura consentita dalle norme imperative di protezione dei consumatori del tuo paese di residenza; ove tali norme dispongano diversamente, esse prevalgono e puoi avviare procedimenti dinanzi ai tribunali del tuo paese di residenza.</p>
+
+<div class="region-note">
+<strong>Per i consumatori:</strong> Nulla nelle presenti Condizioni limita i tuoi diritti ai sensi delle norme imperative di protezione dei consumatori del tuo paese di residenza. Ove tali disposizioni locali imperative si applichino, prevalgono su questa clausola di legge applicabile indipendentemente dalla tua ubicazione, e puoi anche presentare reclami dinanzi ai tribunali del tuo paese di residenza. Ciò si applica ai consumatori di qualsiasi giurisdizione, inclusi, senza limitazione, l’Unione europea e lo Spazio economico europeo.
+</div>
+
+<h2>15. Contatti e reclami</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  E-mail: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
+  Sito web: <a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
+</div>
+<p style="margin-top:1em;">Per reclami su diritti d’autore, licenze o contenuti, visita il nostro <a href="https://artistic-life-research.com">sito web</a> o contattaci direttamente. Rispondiamo entro 7 giorni lavorativi.</p>
+</div>
+
+<!-- ═══════════════ 한국어 (Korean) ═══════════════ -->
+<div class="lang-content" data-lang="ko">
+<h1>이용약관</h1>
+<p class="updated">시행일: 2026년 5월 29일 &nbsp;|&nbsp; 앱: Bible Peace &nbsp;|&nbsp; 개발자: Artistic Life Research</p>
+<div class="gov-note">이것은 편의를 위한 번역입니다. 본 약관의 법적 정본은 영어판이며, 상충하는 경우 영어판이 우선합니다.</div>
+
+<p>Bible Peace 모바일 애플리케이션(이하 "앱")을 사용하기 전에 본 이용약관(이하 "약관")을 주의 깊게 읽어 주십시오. 앱을 다운로드하거나 사용함으로써 귀하는 본 약관에 동의하게 됩니다.</p>
+
+<h2>1. 약관 동의</h2>
+<p>Bible Peace에 접속하거나 이를 사용함으로써 귀하는 만 13세 이상(또는 귀하의 관할권에서 적용되는 디지털 동의 연령 이상)이며 본 약관에 동의함을 확인합니다. 동의하지 않으면 앱을 사용하지 마십시오.</p>
+
+<h2>2. 앱 설명</h2>
+<p>Bible Peace는 무료이며 오프라인 우선 방식의 성경 참조 앱으로, 여러 언어의 성경 본문, 오늘의 말씀, 성경 읽기, 기도 도구, 개인 일기 기능을 제공합니다. 모든 성경 콘텐츠는 개인적·교육적·영적 참조 목적으로만 표시됩니다.</p>
+
+<h2>3. 전문적 조언이 아님 — 중요한 제한</h2>
+<div class="warning">
+<p><strong>Bible Peace는 의료·심리·정신과·법률·재정 또는 그 밖의 어떠한 전문적 조언도 제공하지 않습니다.</strong></p>
+<p>앱에 표시되는 성경 구절, 묵상, 콘텐츠는 일반적인 영적·교육적 참조만을 위한 것입니다. 전문 상담을 대체하지 않습니다. 정신 건강 위기, 의료 응급 상황 또는 법적 문제를 겪고 있다면 즉시 자격 있는 전문가나 응급 서비스에 연락하십시오.</p>
+<p><strong>앱은 응급 서비스가 아닙니다.</strong> 본인 또는 타인에게 즉각적인 위험이 있는 경우, 지금 거주 지역의 응급 서비스에 연락하십시오(예: 한국 119, 미국 911, 영국 999, EU 112, 일본 119).</p>
+</div>
+
+<h2>4. "성경과 대화하기" 기능</h2>
+<p>"성경과 대화하기" 기능은 사용자가 입력한 텍스트를 받아 키워드와 주제에 따라 관련 성경 구절을 반환합니다. 이 기능은:</p>
+<ul>
+  <li>감정 또는 정신 건강 상태를 분석·진단·응답하지 <strong>않습니다</strong></li>
+  <li>상담·치료·영적 지도를 제공하지 <strong>않습니다</strong></li>
+  <li>위기 관련 키워드가 감지되면 성경 구절을 반환하는 대신 응급 안전 화면을 자동으로 표시합니다</li>
+</ul>
+<p>이 기능의 결과는 성경 참조일 뿐이며 어떠한 종류의 조언도 아닙니다.</p>
+
+<h2>5. 허용되는 사용</h2>
+<p>귀하는 개인적·비상업적·교육적 목적으로 앱을 사용할 수 있습니다. 다음 행위는 할 수 없습니다:</p>
+<ul>
+  <li>앱을 역설계, 디컴파일 또는 디스어셈블하는 행위</li>
+  <li>불법적인 목적으로 앱을 사용하는 행위</li>
+  <li>허가 없이 앱 또는 그 콘텐츠를 복제하거나 재배포하는 행위</li>
+  <li>앱에 포함된 성경 번역의 저작자임을 주장하는 행위</li>
+</ul>
+
+<h2>6. 성경 콘텐츠 및 라이선스</h2>
+<p>Bible Peace는 퍼블릭 도메인이거나 오픈 라이선스로 제공되는 성경 번역을 사용합니다. 각 번역의 전체 출처 표시는 앱 내 "크레딧 / 라이선스"에서 확인할 수 있습니다. 주요 라이선스 조건:</p>
+<ul>
+  <li><strong>World English Bible (WEB)</strong>: "World English Bible"은 eBible.org의 상표입니다. 본문은 퍼블릭 도메인입니다.</li>
+  <li><strong>Bíblia Livre (포르투갈어)</strong>: 크리에이티브 커먼즈 저작자표시 3.0 브라질(CC BY 3.0 BR)에 따라 라이선스됩니다. © Diego Santos, Mario Sergio, Marco Teles. <a href="https://creativecommons.org/licenses/by/3.0/br/">라이선스</a></li>
+  <li><strong>개역한글판 (한국어, KRV, 1961)</strong>: 공개된 오픈 저장소에서 가져와 퍼블릭 도메인 전제로 사용합니다. 퍼블릭 도메인 여부는 관할권에 따라 다를 수 있습니다.</li>
+  <li><strong>口語訳聖書 (일본어, 1954/55)</strong>: 퍼블릭 도메인 전제로 사용합니다(발행 후 50년, 2005년 만료). 퍼블릭 도메인 여부는 관할권에 따라 다를 수 있습니다.</li>
+  <li>그 밖의 모든 번역은 주요 관할권에서 퍼블릭 도메인입니다.</li>
+</ul>
+
+<h2>7. 지식재산권</h2>
+<p>Bible Peace 애플리케이션과 그 디자인, 코드, 사용자 인터페이스 및 원본 작성 콘텐츠(성경 본문 제외)는 Artistic Life Research의 지식재산입니다. 모든 권리를 보유합니다.</p>
+<p>앱에 사용된 글꼴(Cormorant Garamond 및 Lato)은 SIL Open Font License 1.1에 따라 라이선스됩니다.</p>
+
+<h2>8. 보증의 부인</h2>
+<p>앱은 상품성, 특정 목적 적합성, 정확성 또는 비침해에 대한 보증을 포함하되 이에 국한되지 않는 어떠한 명시적·묵시적 보증도 없이 "있는 그대로" 그리고 "이용 가능한 대로" 제공됩니다. Artistic Life Research는 앱이 오류가 없거나 중단되지 않거나 유해 요소가 없을 것임을 보증하지 않습니다.</p>
+
+<h2>9. 책임의 제한</h2>
+<p>관련 법률이 허용하는 최대 범위에서 Artistic Life Research는 데이터 손실, 이익 손실 또는 앱의 사용 또는 사용 불능으로 인한 손해를 포함하되 이에 국한되지 않는 간접적·부수적·특별·결과적 또는 징벌적 손해에 대해 책임지지 않습니다.</p>
+<p>관련 법률이 특정 보증의 배제 또는 책임 제한을 허용하지 않는 경우, 그러한 배제 또는 제한은 해당 법률이 허용하는 최대 범위에서만 적용됩니다. 소비자로서 귀하의 법정 권리는 영향을 받지 않습니다.</p>
+
+<h2>10. 종교적·영적 콘텐츠</h2>
+<p>앱은 개인적 참조를 위해 성경 본문과 영적 묵상을 제시합니다. 콘텐츠는 어떠한 교파·교회·종교 기관의 공식 입장도 대표하지 않습니다. 모든 신앙과 배경의 사용자를 환영합니다. 앱은 종교·인종·성별·국적 또는 그 밖의 보호되는 특성을 이유로 차별하지 않습니다.</p>
+
+<h2>11. 아동 및 미성년자의 사용</h2>
+<p>Bible Peace는 일반 이용자를 대상으로 하며, 아동을 대상으로 하거나 아동을 위해 설계되지 않았습니다. 본 앱은 13세 이상 이용을 권장합니다.</p>
+<p>귀하가 거주 국가 또는 관할권의 성년 연령에 이르지 않은 경우, 부모 또는 법정 후견인의 동의와 감독 하에서만 본 앱을 이용할 수 있습니다. 부모 또는 후견인이 미성년자에게 본 앱의 이용을 허락하는 경우, 해당 부모 또는 후견인은 미성년자를 대신하여 본 약관에 동의하고 미성년자의 본 앱 이용에 대한 책임을 집니다.</p>
+<p>Bible Peace는 전 세계에 배포되며, 미성년자가 문화적·교육적·가정적 상황이 크게 다른 환경에서, 때로는 다른 이들과 같은 지도를 받지 못한 채 본 앱을 이용할 수 있음을 인식합니다. 본 앱은 성경 본문을 제시하며, 그 안에는 성숙한 이해나 목회적 맥락이 필요한 구절이 포함됩니다. 따라서 본 앱을 이용하는 미성년자에 대해 부모, 보호자, 신앙 공동체가 인도하고 동행할 것을 강력히 권장합니다.</p>
+<p>본 앱에는 광고, 소셜 또는 메시지 기능, 이용자 간 접촉이 없으며, 선택적 위기 지원 링크와 성경 출처 표시 링크 외에 외부 콘텐츠가 없습니다. 미성년자를 포함한 어떠한 이용자로부터도 개인정보를 고의로 수집하지 않으며, 모든 콘텐츠는 이용자 본인의 기기에만 저장됩니다.</p>
+<p>모든 구매(선택적 Global Edition 등)는 앱 스토어를 통해 처리되며 계정 소유자의 승인을 필요로 합니다. 기기나 계정에서 이루어지는 구매의 감독은 부모와 보호자의 책임입니다.</p>
+
+<h2>12. 개인정보</h2>
+<p>앱 사용은 본 약관에 참조로 포함되는 <a href="privacy-policy.html?lang=ko">개인정보처리방침</a>의 적용도 받습니다. 앱은 개인정보를 수집하거나 어떤 서버에도 저장하거나 전송하지 않습니다.</p>
+
+<h2>13. 변경</h2>
+<p>Artistic Life Research는 언제든지 본 약관을 갱신할 권리를 보유합니다. 중요한 변경은 갱신된 시행일로 반영됩니다. 변경 후에도 앱을 계속 사용하는 경우 개정된 약관에 동의한 것으로 간주됩니다.</p>
+
+<h2>14. 준거법 및 분쟁 해결</h2>
+<p>본 약관은 일본법의 적용을 받습니다. 본 약관 또는 앱에서 발생하거나 이와 관련된 모든 분쟁은 일본 법원의 전속 관할에 따릅니다. 다만 귀하가 소비자인 경우, 이 준거법 및 관할 선택은 귀하의 거주 국가의 강행적 소비자 보호법이 허용하는 범위에서만 적용됩니다. 그러한 법이 달리 정하는 경우 그것이 우선하며, 귀하는 거주 국가의 법원에서 절차를 진행할 수 있습니다.</p>
+
+<div class="region-note">
+<strong>소비자를 위한 안내:</strong> 본 약관의 어떠한 조항도 귀하의 거주 국가의 강행적 소비자 보호법에 따른 권리를 제한하지 않습니다. 그러한 강행 규정이 적용되는 경우, 귀하의 위치와 관계없이 본 준거법 조항에 우선하며, 귀하는 거주 국가의 법원에 청구를 제기할 수도 있습니다. 이는 유럽연합 및 유럽경제지역을 포함하되 이에 국한되지 않는 모든 관할권의 소비자에게 적용됩니다.
+</div>
+
+<h2>15. 연락처 및 불만 접수</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  이메일: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
+  웹사이트: <a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
+</div>
+<p style="margin-top:1em;">저작권, 라이선스 또는 콘텐츠에 관한 불만은 <a href="https://artistic-life-research.com">웹사이트</a>를 참조하시거나 직접 연락해 주십시오. 영업일 기준 7일 이내에 답변드립니다.</p>
+</div>
+
+<!-- ═══════════════ 中文 (Chinese, Simplified) ═══════════════ -->
+<div class="lang-content" data-lang="zh">
+<h1>使用条款</h1>
+<p class="updated">生效日期：2026年5月29日 &nbsp;|&nbsp; 应用：Bible Peace &nbsp;|&nbsp; 开发者：Artistic Life Research</p>
+<div class="gov-note">这是为方便而提供的翻译。本条款具有法律约束力的版本为英文版；如有出入，以英文版为准。</div>
+
+<p>在使用 Bible Peace 移动应用（"本应用"）之前，请仔细阅读本使用条款（"本条款"）。下载或使用本应用即表示您同意受本条款约束。</p>
+
+<h2>1. 接受条款</h2>
+<p>访问或使用 Bible Peace，即表示您确认自己已年满13岁（或您所在司法管辖区适用的数字同意年龄），并同意本条款。如不同意，请勿使用本应用。</p>
+
+<h2>2. 应用说明</h2>
+<p>Bible Peace 是一款免费、以离线为先的圣经参考应用，提供多语言圣经经文、每日经文、圣经阅读、祷告工具和个人日记功能。所有圣经内容仅供个人、教育和灵性参考之用。</p>
+
+<h2>3. 并非专业建议 — 重要限制</h2>
+<div class="warning">
+<p><strong>Bible Peace 不提供医疗、心理、精神科、法律、财务或任何其他形式的专业建议。</strong></p>
+<p>本应用中显示的经文、默想和内容仅供一般灵性和教育参考。它们不能替代专业咨询。如果您正经历心理健康危机、医疗紧急情况或法律事务，请立即联系合格的专业人士或紧急服务。</p>
+<p><strong>本应用不是紧急服务。</strong>如果您本人或他人面临即时危险，请立即联系当地紧急服务（例如：中国 120/110，美国 911，英国 999，欧盟 112，日本 119，韩国 119）。</p>
+</div>
+
+<h2>4. "与圣经对话"功能</h2>
+<p>"与圣经对话"功能接收用户输入的文本，并根据关键词和主题返回相关的圣经经文。该功能：</p>
+<ul>
+  <li><strong>不</strong>分析、诊断或回应情绪或心理健康状态</li>
+  <li><strong>不</strong>提供咨询、治疗或灵性指导</li>
+  <li>当检测到与危机相关的关键词时，会自动显示紧急安全页面，而不返回经文</li>
+</ul>
+<p>该功能的输出仅为圣经参考，并非任何形式的建议。</p>
+
+<h2>5. 允许的使用</h2>
+<p>您可将本应用用于个人、非商业和教育目的。您不得：</p>
+<ul>
+  <li>对本应用进行逆向工程、反编译或反汇编</li>
+  <li>将本应用用于任何非法目的</li>
+  <li>未经许可复制或再分发本应用或其内容</li>
+  <li>声称对本应用所含圣经译本拥有著作权</li>
+</ul>
+
+<h2>6. 圣经内容与许可</h2>
+<p>Bible Peace 使用属于公有领域或采用开放许可的圣经译本。每个译本的完整署名可在应用内"鸣谢 / 许可"中查看。主要许可条款：</p>
+<ul>
+  <li><strong>World English Bible (WEB)</strong>："World English Bible" 是 eBible.org 的商标。文本属于公有领域。</li>
+  <li><strong>Bíblia Livre（葡萄牙语）</strong>：依据知识共享 署名 3.0 巴西（CC BY 3.0 BR）许可。© Diego Santos, Mario Sergio, Marco Teles。<a href="https://creativecommons.org/licenses/by/3.0/br/">许可</a></li>
+  <li><strong>개역한글판（韩语，KRV，1961）</strong>：在公有领域推定下使用，取自公开的开放仓库。公有领域状态可能因司法管辖区而异。</li>
+  <li><strong>口語訳聖書（日语，1954/55）</strong>：在公有领域推定下使用（自出版起50年，已于2005年到期）。公有领域状态可能因司法管辖区而异。</li>
+  <li>所有其他译本在主要司法管辖区均属公有领域。</li>
+</ul>
+
+<h2>7. 知识产权</h2>
+<p>Bible Peace 应用及其设计、代码、用户界面和原创文字内容（圣经文本除外）均为 Artistic Life Research 的知识产权。保留所有权利。</p>
+<p>本应用所用字体（Cormorant Garamond 和 Lato）依据 SIL 开放字体许可证 1.1 授权。</p>
+
+<h2>8. 免责声明</h2>
+<p>本应用按"现状"和"现有"提供，不作任何明示或默示的保证，包括但不限于适销性、特定用途适用性、准确性或不侵权的保证。Artistic Life Research 不保证本应用没有错误、不中断或不含有害组件。</p>
+
+<h2>9. 责任限制</h2>
+<p>在适用法律允许的最大范围内，Artistic Life Research 不对任何间接、附带、特殊、后果性或惩罚性损害负责，包括但不限于数据丢失、利润损失或因您使用或无法使用本应用而产生的任何损害。</p>
+<p>若适用法律不允许排除某些保证或限制责任，则该等排除或限制仅在该法律允许的最大范围内适用。您作为消费者的法定权利不受影响。</p>
+
+<h2>10. 宗教与灵性内容</h2>
+<p>本应用提供圣经文本和灵性默想供个人参考。内容不代表任何宗派、教会或宗教机构的官方立场。欢迎所有信仰和背景的用户。本应用不因宗教、种族、性别、国籍或任何其他受保护特征而歧视。</p>
+
+<h2>11. 儿童及未成年人使用</h2>
+<p>Bible Peace 面向一般用户，并非针对或专为儿童设计。我们建议13岁及以上的用户使用本应用。</p>
+<p>如果您未达到所在国家或司法管辖区的成年年龄，您只能在父母或法定监护人的同意和监督下使用本应用。父母或监护人允许未成年人使用本应用，即代表该未成年人接受本条款，并对该未成年人使用本应用承担责任。</p>
+<p>Bible Peace 面向全球发行，我们认识到未成年人会在文化、教育和家庭状况差异极大的环境中使用本应用，有时无法获得与他人相同的引导。本应用呈现圣经文本，其中包含可能需要成熟理解或牧养性背景的经文。因此，我们强烈鼓励父母、监护人和信仰群体引导并陪伴使用本应用的任何未成年人。</p>
+<p>本应用不含广告、社交或消息功能，也无用户之间的联系，除可选的危机支持链接和圣经来源署名链接外没有外部内容。本应用不会有意收集任何用户（包括未成年人）的个人数据，并仅将所有内容存储在用户自己的设备上。</p>
+<p>任何购买（如可选的 Global Edition）均由应用商店处理，并需要账户持有人授权。父母和监护人有责任监督在其设备或账户上进行的购买。</p>
+
+<h2>12. 隐私</h2>
+<p>您对本应用的使用还受我们的<a href="privacy-policy.html?lang=zh">隐私政策</a>约束，该政策通过引用并入本条款。本应用不收集、不在任何服务器上存储、也不传输个人数据。</p>
+
+<h2>13. 修改</h2>
+<p>Artistic Life Research 保留随时更新本条款的权利。重大变更将以更新的生效日期体现。变更后继续使用本应用即构成接受修订后的条款。</p>
+
+<h2>14. 管辖法律与争议解决</h2>
+<p>本条款受日本法律管辖。因本条款或本应用引起或与之相关的任何争议，均受日本法院的专属管辖。但如果您是消费者，此法律和管辖选择仅在您居住国强制性消费者保护法允许的范围内适用；若该等法律另有规定，则以其为准，且您可在居住国法院提起诉讼。</p>
+
+<div class="region-note">
+<strong>致消费者：</strong>本条款中的任何内容均不限制您依据居住国强制性消费者保护法所享有的权利。在该等强制性当地规定适用时，无论您身处何地，其均优先于本管辖法律条款，您也可在居住国法院提出索赔。这适用于任何司法管辖区的消费者，包括但不限于欧盟和欧洲经济区。
+</div>
+
+<h2>15. 联系与投诉</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  电子邮箱：<a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
+  网站：<a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
+</div>
+<p style="margin-top:1em;">有关版权、许可或内容的投诉，请访问我们的<a href="https://artistic-life-research.com">网站</a>或直接联系我们。我们将在7个工作日内回复。</p>
+</div>
+
+<!-- ═══════════════ Русский (Russian) ═══════════════ -->
+<div class="lang-content" data-lang="ru">
+<h1>Условия использования</h1>
+<p class="updated">Дата вступления в силу: 29 мая 2026 г. &nbsp;|&nbsp; Приложение: Bible Peace &nbsp;|&nbsp; Разработчик: Artistic Life Research</p>
+<div class="gov-note">Это перевод, предоставленный для удобства. Юридически обязательной версией настоящих Условий является английская версия; в случае расхождений преимущественную силу имеет английский текст.</div>
+
+<p>Внимательно прочитайте настоящие Условия использования («Условия») перед использованием мобильного приложения Bible Peace («Приложение»). Загружая или используя Приложение, вы соглашаетесь соблюдать настоящие Условия.</p>
+
+<h2>1. Принятие Условий</h2>
+<p>Получая доступ к Bible Peace или используя его, вы подтверждаете, что вам не менее 13 лет (или достигли возраста цифрового согласия, применимого в вашей юрисдикции) и что вы принимаете настоящие Условия. Если вы не согласны, не используйте Приложение.</p>
+
+<h2>2. Описание Приложения</h2>
+<p>Bible Peace — это бесплатное, ориентированное на офлайн приложение для чтения Библии, предоставляющее доступ к текстам Священного Писания на нескольких языках, стих дня, чтение Библии, инструменты для молитвы и личный дневник. Всё библейское содержимое отображается исключительно в личных, образовательных и духовных справочных целях.</p>
+
+<h2>3. Не является профессиональной консультацией — Важное ограничение</h2>
+<div class="warning">
+<p><strong>Bible Peace не предоставляет медицинских, психологических, психиатрических, юридических, финансовых или любых иных профессиональных консультаций.</strong></p>
+<p>Тексты Писания, размышления и содержимое, отображаемые в Приложении, предоставляются только в качестве общей духовной и образовательной справки. Они не заменяют профессиональную консультацию. Если вы переживаете кризис психического здоровья, неотложную медицинскую ситуацию или юридический вопрос, немедленно обратитесь к квалифицированному специалисту или в экстренную службу.</p>
+<p><strong>Приложение не является экстренной службой.</strong> При непосредственной опасности для вас или окружающих немедленно свяжитесь с местными экстренными службами (например, 112 в ЕС и России, 911 в США, 999 в Великобритании, 119 в Японии, 119 в Южной Корее).</p>
+</div>
+
+<h2>4. Функция «Беседа с Библией»</h2>
+<p>Функция «Беседа с Библией» принимает введённый пользователем текст и возвращает соответствующие библейские стихи на основе ключевых слов и тем. Эта функция:</p>
+<ul>
+  <li><strong>не</strong> анализирует, не диагностирует и не реагирует на эмоциональные состояния или состояние психического здоровья</li>
+  <li><strong>не</strong> предоставляет консультирование, терапию или духовное руководство</li>
+  <li>автоматически отображает экран экстренной безопасности при обнаружении ключевых слов, связанных с кризисом, вместо возврата стихов</li>
+</ul>
+<p>Результат этой функции — только библейская ссылка. Это не является советом какого-либо рода.</p>
+
+<h2>5. Разрешённое использование</h2>
+<p>Вы можете использовать Приложение в личных, некоммерческих и образовательных целях. Вы не вправе:</p>
+<ul>
+  <li>подвергать Приложение обратному проектированию, декомпиляции или дизассемблированию</li>
+  <li>использовать Приложение в любых незаконных целях</li>
+  <li>воспроизводить или распространять Приложение или его содержимое без разрешения</li>
+  <li>заявлять об авторстве библейских переводов, включённых в Приложение</li>
+</ul>
+
+<h2>6. Библейское содержимое и лицензии</h2>
+<p>Bible Peace использует переводы Библии, находящиеся в общественном достоянии или распространяемые по открытым лицензиям. Полные сведения об авторстве каждого перевода доступны в Приложении в разделе «Благодарности / Лицензии». Основные условия лицензий:</p>
+<ul>
+  <li><strong>World English Bible (WEB)</strong>: «World English Bible» — товарный знак eBible.org. Текст находится в общественном достоянии.</li>
+  <li><strong>Bíblia Livre (португальский)</strong>: Лицензировано по Creative Commons Attribution 3.0 Brazil (CC BY 3.0 BR). © Diego Santos, Mario Sergio, Marco Teles. <a href="https://creativecommons.org/licenses/by/3.0/br/">Лицензия</a></li>
+  <li><strong>개역한글판 (корейский, KRV, 1961)</strong>: Используется при предположении об общественном достоянии, получено из общедоступных открытых репозиториев. Статус общественного достояния может различаться в зависимости от юрисдикции.</li>
+  <li><strong>口語訳聖書 (японский, 1954/55)</strong>: Используется при предположении об общественном достоянии (срок 50 лет с момента публикации, истёк в 2005 году). Статус общественного достояния может различаться в зависимости от юрисдикции.</li>
+  <li>Все остальные переводы находятся в общественном достоянии в основных юрисдикциях.</li>
+</ul>
+
+<h2>7. Интеллектуальная собственность</h2>
+<p>Приложение Bible Peace, его дизайн, код, пользовательский интерфейс и оригинальное письменное содержимое (за исключением библейского текста) являются интеллектуальной собственностью Artistic Life Research. Все права защищены.</p>
+<p>Шрифты, используемые в Приложении (Cormorant Garamond и Lato), лицензированы по SIL Open Font License 1.1.</p>
+
+<h2>8. Отказ от гарантий</h2>
+<p>Приложение предоставляется «как есть» и «по мере доступности», без каких-либо гарантий, явных или подразумеваемых, включая, помимо прочего, гарантии товарной пригодности, пригодности для определённой цели, точности или ненарушения прав. Artistic Life Research не гарантирует, что Приложение будет безошибочным, бесперебойным или свободным от вредоносных компонентов.</p>
+
+<h2>9. Ограничение ответственности</h2>
+<p>В максимальной степени, разрешённой применимым правом, Artistic Life Research не несёт ответственности за любые косвенные, случайные, специальные, последующие или штрафные убытки, включая, помимо прочего, потерю данных, упущенную выгоду или любой ущерб, возникший в результате использования или невозможности использования Приложения.</p>
+<p>Если применимое право не допускает исключения определённых гарантий или ограничения ответственности, такие исключения или ограничения применяются только в максимально допустимой этим правом степени. Ваши установленные законом права потребителя не затрагиваются.</p>
+
+<h2>10. Религиозное и духовное содержимое</h2>
+<p>Приложение представляет библейские тексты и духовные размышления в качестве личной справки. Содержимое не отражает официальную позицию какой-либо конфессии, церкви или религиозного учреждения. Приветствуются пользователи всех вероисповеданий и любого происхождения. Приложение не допускает дискриминации по признаку религии, расы, пола, национальности или любого иного защищаемого признака.</p>
+
+<h2>11. Использование детьми и несовершеннолетними</h2>
+<p>Bible Peace предназначено для широкой аудитории и не адресовано детям и не разработано для них. Мы рекомендуем Приложение пользователям от 13 лет.</p>
+<p>Если вы не достигли возраста совершеннолетия в вашей стране или юрисдикции, вы можете использовать Приложение только с согласия и под наблюдением родителя или законного опекуна. Разрешая несовершеннолетнему пользоваться Приложением, такой родитель или опекун принимает настоящие Условия от имени несовершеннолетнего и берёт на себя ответственность за использование Приложения несовершеннолетним.</p>
+<p>Bible Peace распространяется по всему миру, и мы понимаем, что несовершеннолетние используют Приложение в самых разных культурных, образовательных и семейных условиях, иногда не имея того же сопровождения, что и другие. Приложение представляет текст Библии, который содержит места, способные потребовать зрелого понимания или пастырского контекста. Поэтому мы настоятельно призываем родителей, опекунов и общины веры направлять и сопровождать любого несовершеннолетнего, который пользуется Приложением.</p>
+<p>Приложение не содержит рекламы, социальных функций или функций обмена сообщениями, не предусматривает контакта между пользователями и не имеет внешнего содержимого, кроме необязательных ссылок на кризисную поддержку и указание источников Писания. Оно сознательно не собирает персональные данные ни от каких пользователей, включая несовершеннолетних, и хранит всё содержимое только на устройстве самого пользователя.</p>
+<p>Любая покупка (например, необязательная Global Edition) обрабатывается магазином приложений и требует авторизации владельца учётной записи. Родители и опекуны несут ответственность за контроль покупок, совершаемых на их устройствах или в их учётных записях.</p>
+
+<h2>12. Конфиденциальность</h2>
+<p>Использование Приложения также регулируется нашей <a href="privacy-policy.html?lang=ru">Политикой конфиденциальности</a>, которая включена в настоящие Условия посредством ссылки. Приложение не собирает, не хранит на каком-либо сервере и не передаёт персональные данные.</p>
+
+<h2>13. Изменения</h2>
+<p>Artistic Life Research оставляет за собой право обновлять настоящие Условия в любое время. Существенные изменения отражаются обновлённой датой вступления в силу. Продолжение использования Приложения после изменений означает принятие пересмотренных Условий.</p>
+
+<h2>14. Применимое право и разрешение споров</h2>
+<p>Настоящие Условия регулируются законодательством Японии. Любые споры, вытекающие из настоящих Условий или Приложения либо связанные с ними, подлежат исключительной юрисдикции судов Японии. Однако если вы являетесь потребителем, данный выбор права и юрисдикции применяется только в той мере, в какой это разрешено императивными нормами законодательства о защите прав потребителей страны вашего проживания; если такие нормы предусматривают иное, они имеют преимущественную силу, и вы можете возбуждать разбирательство в судах страны вашего проживания.</p>
+
+<div class="region-note">
+<strong>Для потребителей:</strong> Ничто в настоящих Условиях не ограничивает ваши права согласно императивным нормам законодательства о защите прав потребителей страны вашего проживания. Если такие императивные местные положения применимы, они имеют преимущественную силу над настоящей оговоркой о применимом праве независимо от вашего местонахождения, и вы также можете предъявлять требования в судах страны вашего проживания. Это применимо к потребителям в любой юрисдикции, включая, помимо прочего, Европейский союз и Европейское экономическое пространство.
+</div>
+
+<h2>15. Контакты и жалобы</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  Эл. почта: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
+  Веб-сайт: <a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
+</div>
+<p style="margin-top:1em;">По жалобам в отношении авторских прав, лицензий или содержимого посетите наш <a href="https://artistic-life-research.com">веб-сайт</a> или свяжитесь с нами напрямую. Мы отвечаем в течение 7 рабочих дней.</p>
+</div>
+
+<!-- ═══════════════ العربية (Arabic) ═══════════════ -->
+<div class="lang-content" data-lang="ar" dir="rtl">
+<h1>شروط الاستخدام</h1>
+<p class="updated">تاريخ السريان: 29 مايو 2026 &nbsp;|&nbsp; التطبيق: Bible Peace &nbsp;|&nbsp; المطوِّر: Artistic Life Research</p>
+<div class="gov-note">هذه ترجمة مقدَّمة للتيسير. النسخة الإنجليزية هي النسخة المُلزِمة قانونًا من هذه الشروط؛ وفي حال وجود أي اختلاف، يُعتدّ بالنص الإنجليزي.</div>
+
+<p>يُرجى قراءة شروط الاستخدام هذه ("الشروط") بعناية قبل استخدام تطبيق Bible Peace للهاتف المحمول ("التطبيق"). بتنزيلك التطبيق أو استخدامه، فإنك توافق على الالتزام بهذه الشروط.</p>
+
+<h2>1. قبول الشروط</h2>
+<p>بوصولك إلى Bible Peace أو استخدامه، فإنك تؤكد أن عمرك لا يقل عن 13 عامًا (أو سن الموافقة الرقمية المعمول به في نطاق اختصاصك) وأنك توافق على هذه الشروط. إذا لم توافق، فلا تستخدم التطبيق.</p>
+
+<h2>2. وصف التطبيق</h2>
+<p>Bible Peace تطبيق مرجعي للكتاب المقدس مجاني ويعمل دون اتصال أولًا، يتيح الوصول إلى نصوص الكتاب المقدس بعدة لغات، وآية يومية، وقراءة الكتاب المقدس، وأدوات للصلاة، ومذكرات شخصية. تُعرض جميع محتويات الكتاب المقدس لأغراض المرجعية الشخصية والتعليمية والروحية فقط.</p>
+
+<h2>3. ليست استشارة مهنية — تقييد مهم</h2>
+<div class="warning">
+<p><strong>لا يقدّم Bible Peace أي استشارة طبية أو نفسية أو نفسية عقلية أو قانونية أو مالية أو أي شكل آخر من أشكال الاستشارة المهنية.</strong></p>
+<p>النصوص والتأملات والمحتويات المعروضة في التطبيق مقدَّمة كمرجع روحي وتعليمي عام فقط. وهي ليست بديلًا عن الاستشارة المهنية. إذا كنت تمر بأزمة صحة نفسية أو حالة طوارئ طبية أو مسألة قانونية، فاتصل فورًا بمختص مؤهل أو بخدمة طوارئ.</p>
+<p><strong>التطبيق ليس خدمة طوارئ.</strong> في حال وجود خطر مباشر عليك أو على الآخرين، اتصل الآن بخدمات الطوارئ المحلية (على سبيل المثال 112 في الاتحاد الأوروبي، 911 في الولايات المتحدة، 999 في المملكة المتحدة، 119 في اليابان، 119 في كوريا الجنوبية).</p>
+</div>
+
+<h2>4. ميزة "تحدّث مع الكتاب المقدس"</h2>
+<p>تتلقى ميزة "تحدّث مع الكتاب المقدس" نصًّا يُدخله المستخدم وتعيد آيات كتابية ذات صلة استنادًا إلى كلمات مفتاحية وموضوعات. هذه الميزة:</p>
+<ul>
+  <li><strong>لا</strong> تحلّل الحالات العاطفية أو حالات الصحة النفسية ولا تشخّصها ولا تستجيب لها</li>
+  <li><strong>لا</strong> تقدّم إرشادًا نفسيًا أو علاجًا أو توجيهًا روحيًا</li>
+  <li>تعرض تلقائيًا شاشة أمان للطوارئ عند رصد كلمات مفتاحية متعلقة بالأزمات، بدلًا من إعادة الآيات</li>
+</ul>
+<p>ناتج هذه الميزة هو مرجع كتابي فقط. وهو ليس نصيحة من أي نوع.</p>
+
+<h2>5. الاستخدام المسموح به</h2>
+<p>يمكنك استخدام التطبيق لأغراض شخصية وغير تجارية وتعليمية. ولا يجوز لك:</p>
+<ul>
+  <li>إجراء هندسة عكسية للتطبيق أو فك ترجمته أو تفكيكه</li>
+  <li>استخدام التطبيق لأي غرض غير قانوني</li>
+  <li>إعادة إنتاج التطبيق أو محتواه أو إعادة توزيعه دون إذن</li>
+  <li>ادّعاء تأليف الترجمات الكتابية المضمَّنة في التطبيق</li>
+</ul>
+
+<h2>6. محتوى الكتاب المقدس والتراخيص</h2>
+<p>يستخدم Bible Peace ترجمات للكتاب المقدس تقع في الملك العام أو مرخَّصة بموجب تراخيص مفتوحة. تتوفر النسبة الكاملة لكل ترجمة داخل التطبيق ضمن "المساهمون / التراخيص". أهم شروط الترخيص:</p>
+<ul>
+  <li><strong>World English Bible (WEB)</strong>: "World English Bible" علامة تجارية لـ eBible.org. والنص في الملك العام.</li>
+  <li><strong>Bíblia Livre (البرتغالية)</strong>: مرخَّصة بموجب المشاع الإبداعي نَسب المُصنَّف 3.0 البرازيل (CC BY 3.0 BR). © Diego Santos، Mario Sergio، Marco Teles. <a href="https://creativecommons.org/licenses/by/3.0/br/">الترخيص</a></li>
+  <li><strong>개역한글판 (الكورية، KRV، 1961)</strong>: تُستخدم بافتراض الملك العام، مصدرها مستودعات مفتوحة متاحة للعموم. وقد تختلف حالة الملك العام باختلاف نطاق الاختصاص.</li>
+  <li><strong>口語訳聖書 (اليابانية، 1954/55)</strong>: تُستخدم بافتراض الملك العام (مدة 50 عامًا من النشر، انتهت في 2005). وقد تختلف حالة الملك العام باختلاف نطاق الاختصاص.</li>
+  <li>جميع الترجمات الأخرى في الملك العام في نطاقات الاختصاص الرئيسية.</li>
+</ul>
+
+<h2>7. الملكية الفكرية</h2>
+<p>تطبيق Bible Peace وتصميمه وشفرته وواجهة المستخدم والمحتوى الأصلي المكتوب (باستثناء نص الكتاب المقدس) ملكية فكرية لـ Artistic Life Research. جميع الحقوق محفوظة.</p>
+<p>الخطوط المستخدمة في التطبيق (Cormorant Garamond وLato) مرخَّصة بموجب رخصة SIL للخطوط المفتوحة 1.1.</p>
+
+<h2>8. إخلاء المسؤولية عن الضمانات</h2>
+<p>يُقدَّم التطبيق "كما هو" و"حسب توافره"، دون أي ضمانات من أي نوع، صريحة أو ضمنية، بما في ذلك على سبيل المثال لا الحصر ضمانات القابلية للتسويق أو الملاءمة لغرض معيّن أو الدقة أو عدم الانتهاك. ولا تضمن Artistic Life Research أن يكون التطبيق خاليًا من الأخطاء أو غير منقطع أو خاليًا من المكوّنات الضارة.</p>
+
+<h2>9. تحديد المسؤولية</h2>
+<p>إلى أقصى حد يسمح به القانون المعمول به، لن تكون Artistic Life Research مسؤولة عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو تأديبية، بما في ذلك على سبيل المثال لا الحصر فقدان البيانات أو فقدان الأرباح أو أي ضرر ناتج عن استخدامك للتطبيق أو عدم قدرتك على استخدامه.</p>
+<p>وحيثما لا يسمح القانون المعمول به باستبعاد ضمانات معيّنة أو تحديد المسؤولية، تُطبَّق هذه الاستبعادات أو التحديدات فقط إلى أقصى حد يسمح به ذلك القانون. ولا تتأثر حقوقك القانونية بصفتك مستهلكًا.</p>
+
+<h2>10. المحتوى الديني والروحي</h2>
+<p>يعرض التطبيق نصوصًا كتابية وتأملات روحية كمرجع شخصي. ولا يمثّل المحتوى الموقف الرسمي لأي طائفة أو كنيسة أو مؤسسة دينية. ومرحَّب بالمستخدمين من جميع الأديان والخلفيات. ولا يميّز التطبيق على أساس الدين أو العِرق أو الجنس أو الجنسية أو أي سمة أخرى محميّة.</p>
+
+<h2>11. استخدام الأطفال والقاصرين</h2>
+<p>تطبيق Bible Peace موجَّه لجمهور عام وليس موجَّهًا للأطفال ولا مصمَّمًا لهم. ونوصي باستخدام التطبيق لمن هم في سن 13 عامًا فأكثر.</p>
+<p>إذا كنت دون سن الرشد في بلدك أو نطاق اختصاصك، فلا يجوز لك استخدام التطبيق إلا بموافقة أحد الوالدين أو الوصي القانوني وتحت إشرافه. وبسماح أحد الوالدين أو الوصي لقاصر باستخدام التطبيق، فإنه يقبل هذه الشروط نيابةً عن القاصر ويتحمل المسؤولية عن استخدام القاصر للتطبيق.</p>
+<p>يُوزَّع Bible Peace في جميع أنحاء العالم، وندرك أن القاصرين يستخدمون التطبيق في ظروف ثقافية وتعليمية وأسرية شديدة التنوّع، وأحيانًا دون توفّر التوجيه نفسه المتاح لغيرهم. ويعرض التطبيق نص الكتاب المقدس الذي يتضمن مقاطع قد تتطلب فهمًا ناضجًا أو سياقًا رعويًا. لذا نشجّع بقوة الوالدين والأوصياء والمجتمعات الإيمانية على إرشاد ومرافقة أي قاصر يستخدم التطبيق.</p>
+<p>لا يحتوي التطبيق على إعلانات ولا ميزات تواصل اجتماعي أو مراسلة ولا تواصل بين المستخدمين، وليس فيه محتوى خارجي عدا روابط دعم الأزمات الاختيارية وروابط نَسب مصادر الكتاب المقدس. ولا يجمع عن قصد أي بيانات شخصية من أي مستخدم، بمن فيهم القاصرون، ويخزّن جميع المحتوى على جهاز المستخدم نفسه فقط.</p>
+<p>تُعالَج أي عملية شراء (مثل Global Edition الاختيارية) عبر متجر التطبيقات وتتطلب إذن صاحب الحساب. ويتحمّل الوالدان والأوصياء مسؤولية الإشراف على عمليات الشراء التي تتم على أجهزتهم أو حساباتهم.</p>
+
+<h2>12. الخصوصية</h2>
+<p>يخضع استخدامك للتطبيق أيضًا لـ<a href="privacy-policy.html?lang=ar">سياسة الخصوصية</a> الخاصة بنا، المُدمجة في هذه الشروط بالإحالة. ولا يجمع التطبيق بيانات شخصية ولا يخزّنها على أي خادم ولا ينقلها.</p>
+
+<h2>13. التعديلات</h2>
+<p>تحتفظ Artistic Life Research بالحق في تحديث هذه الشروط في أي وقت. وتنعكس التغييرات الجوهرية بتحديث تاريخ السريان. ويُعدّ استمرارك في استخدام التطبيق بعد التغييرات قبولًا للشروط المعدَّلة.</p>
+
+<h2>14. القانون الحاكم وحل النزاعات</h2>
+<p>تخضع هذه الشروط لقوانين اليابان. وأي نزاع ينشأ عن هذه الشروط أو التطبيق أو يتعلق بهما يخضع للاختصاص القضائي الحصري لمحاكم اليابان. ومع ذلك، إذا كنت مستهلكًا، فإن اختيار القانون والاختصاص هذا لا يُطبَّق إلا بالقدر الذي تسمح به القوانين الإلزامية لحماية المستهلك في بلد إقامتك؛ وحيثما تنص تلك القوانين على خلاف ذلك، فإنها تسود، ويمكنك رفع الدعاوى أمام محاكم بلد إقامتك.</p>
+
+<div class="region-note">
+<strong>للمستهلكين:</strong> لا شيء في هذه الشروط يحدّ من حقوقك بموجب القوانين الإلزامية لحماية المستهلك في بلد إقامتك. وحيثما تنطبق تلك الأحكام المحلية الإلزامية، فإنها تسود على بند القانون الحاكم هذا بغضّ النظر عن موقعك، ويمكنك أيضًا رفع المطالبات أمام محاكم بلد إقامتك. وينطبق ذلك على المستهلكين في أي نطاق اختصاص، بما في ذلك على سبيل المثال لا الحصر الاتحاد الأوروبي والمنطقة الاقتصادية الأوروبية.
+</div>
+
+<h2>15. التواصل والشكاوى</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  البريد الإلكتروني: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
+  الموقع الإلكتروني: <a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
+</div>
+<p style="margin-top:1em;">بخصوص الشكاوى المتعلقة بحقوق النشر أو التراخيص أو المحتوى، يُرجى زيارة <a href="https://artistic-life-research.com">موقعنا الإلكتروني</a> أو التواصل معنا مباشرة. نردّ خلال 7 أيام عمل.</p>
+</div>
+
+<!-- ═══════════════ Latina (Latin) ═══════════════ -->
+<div class="lang-content" data-lang="la">
+<h1>Condiciones Usus</h1>
+<p class="updated">Dies vigoris: 29 Maii 2026 &nbsp;|&nbsp; Applicatio: Bible Peace &nbsp;|&nbsp; Auctor: Artistic Life Research</p>
+<div class="gov-note">Haec est translatio commoditatis causa praebita. Versio Anglica est versio iuridice obligans harum Condicionum; si quid discrepat, textus Anglicus praevalet.</div>
+
+<p>Quaeso has Condiciones Usus ("Condiciones") diligenter legas antequam applicatione mobili Bible Peace ("Applicatio") utaris. Applicationem demittendo vel utendo, his Condicionibus obligari consentis.</p>
+
+<h2>1. Acceptatio Condicionum</h2>
+<p>Bible Peace adeundo vel utendo, confirmas te saltem 13 annos natum esse (vel aetatem consensus digitalis in tua iurisdictione applicabilem) atque his Condicionibus consentire. Si non consentis, Applicatione ne utaris.</p>
+
+<h2>2. Descriptio Applicationis</h2>
+<p>Bible Peace est applicatio biblica gratuita et offline-prior quae accessum praebet ad Scripturas pluribus linguis, versiculum cotidianum, lectionem Bibliorum, instrumenta orationis et diarium personale. Omnia biblica solum ad usum personalem, educativum et spiritualem referenda monstrantur.</p>
+
+<h2>3. Non est Consilium Professionale — Limitatio Gravis</h2>
+<div class="warning">
+<p><strong>Bible Peace nullum consilium medicum, psychologicum, psychiatricum, iuridicum, financiarium aliamve formam consilii professionalis praebet.</strong></p>
+<p>Scripturae, meditationes et contenta in Applicatione monstrata solum ad generalem referentiam spiritualem et educativam praebentur. Consultationem professionalem non substituunt. Si crisim mentis, casum medicum urgentem vel rem iuridicam pateris, statim professionalem peritum vel servitium urgentiae conveni.</p>
+<p><strong>Applicatio non est servitium urgentiae.</strong> In periculo immediato tibi vel aliis, nunc servitia urgentiae localia conveni (exempli gratia 112 in UE, 911 in CFA, 999 in Britannia, 119 in Iaponia, 119 in Corea Meridionali).</p>
+</div>
+
+<h2>4. Munus "Cum Bibliis Colloqui"</h2>
+<p>Munus "Cum Bibliis Colloqui" textum ab usuario insertum accipit et versiculos biblicos pertinentes secundum verba clavis et themata reddit. Hoc munus:</p>
+<ul>
+  <li><strong>Non</strong> status affectuum vel mentis analyzat, diagnoscit aut iis respondet</li>
+  <li><strong>Non</strong> consultationem, therapiam vel directionem spiritualem praebet</li>
+  <li>Scrinium securitatis urgentiae automatice monstrat cum verba clavis ad crisim pertinentia deteguntur, loco versiculorum reddendorum</li>
+</ul>
+<p>Effectus huius muneris est tantum relatio biblica. Nullius generis consilium est.</p>
+
+<h2>5. Usus Permissus</h2>
+<p>Applicatione uti potes ad fines personales, non commerciales et educativos. Non licet tibi:</p>
+<ul>
+  <li>Applicationem retro-fabricare, decompilare vel disassemblare</li>
+  <li>Applicatione ad ullum finem illicitum uti</li>
+  <li>Applicationem vel eius contenta sine licentia reproducere vel redistribuere</li>
+  <li>Auctoritatem translationum biblicarum in Applicatione inclusarum sibi vindicare</li>
+</ul>
+
+<h2>6. Contenta Biblica et Licentiae</h2>
+<p>Bible Peace translationibus Bibliorum utitur quae in dominio publico sunt vel sub licentiis apertis licentiatae. Plena attributio cuiusque translationis in Applicatione sub "Crediti / Licentiae" praesto est. Praecipui termini licentiae:</p>
+<ul>
+  <li><strong>World English Bible (WEB)</strong>: "World English Bible" est nota mercatoria eBible.org. Textus in dominio publico est.</li>
+  <li><strong>Bíblia Livre (Lusitanice)</strong>: Sub Creative Commons Attributio 3.0 Brasilia (CC BY 3.0 BR) licentiata. © Diego Santos, Mario Sergio, Marco Teles. <a href="https://creativecommons.org/licenses/by/3.0/br/">Licentia</a></li>
+  <li><strong>개역한글판 (Coreane, KRV, 1961)</strong>: Sub praesumptione dominii publici adhibita, ex promptuariis apertis publice praesto sumpta. Status dominii publici secundum iurisdictionem variare potest.</li>
+  <li><strong>口語訳聖書 (Iaponice, 1954/55)</strong>: Sub praesumptione dominii publici adhibita (spatium 50 annorum a publicatione, anno 2005 exspiravit). Status dominii publici secundum iurisdictionem variare potest.</li>
+  <li>Omnes ceterae translationes in dominio publico in praecipuis iurisdictionibus sunt.</li>
+</ul>
+
+<h2>7. Proprietas Intellectualis</h2>
+<p>Applicatio Bible Peace, eius consilium, codex, interfacies usuarii et contentum scriptum originale (textu biblico excepto) proprietas intellectualis Artistic Life Research sunt. Omnia iura reservata.</p>
+<p>Typi in Applicatione adhibiti (Cormorant Garamond et Lato) sub SIL Open Font License 1.1 licentiati sunt.</p>
+
+<h2>8. Renuntiatio Praestationum</h2>
+<p>Applicatio "uti est" et "ut praesto est" praebetur, sine ullis praestationibus, expressis vel tacitis, includentibus sed non limitatis ad praestationes mercabilitatis, idoneitatis ad finem particularem, accurationis vel non-violationis. Artistic Life Research non praestat Applicationem fore sine erroribus, sine interruptione vel sine componentibus nocivis.</p>
+
+<h2>9. Limitatio Responsabilitatis</h2>
+<p>Quantum lex applicabilis permittit, Artistic Life Research non responsabilis erit de ullis damnis indirectis, incidentibus, specialibus, consequentibus vel punitivis, includentibus sed non limitatis ad amissionem datorum, amissionem lucrorum vel ullum damnum ex usu vel impossibilitate usus Applicationis ortum.</p>
+<p>Ubi lex applicabilis exclusionem certarum praestationum vel limitationem responsabilitatis non permittit, tales exclusiones vel limitationes solum quantum ea lex permittit applicantur. Iura tua legalia ut consumptoris non afficiuntur.</p>
+
+<h2>10. Contentum Religiosum et Spirituale</h2>
+<p>Applicatio textus biblicos et meditationes spirituales ad referentiam personalem praebet. Contentum positionem officialem nullius confessionis, ecclesiae vel instituti religiosi repraesentat. Usuarii omnium fidei et originum salutantur. Applicatio non discriminat ob religionem, gentem, sexum, nationalitatem vel ullam aliam notam protectam.</p>
+
+<h2>11. Usus a Pueris et Minoribus</h2>
+<p>Bible Peace universo publico destinata est nec ad pueros directa nec iis excogitata. Applicationem usuariis 13 annorum et maioribus commendamus.</p>
+<p>Si aetatem maioritatis in regione vel iurisdictione tua nondum attigisti, Applicatione uti potes solum cum consensu et sub custodia parentis vel tutoris legalis. Permittendo minorem Applicatione uti, talis parens vel tutor his Condicionibus nomine minoris consentit et responsabilitatem usus Applicationis a minore suscipit.</p>
+<p>Bible Peace per totum orbem distribuitur, et agnoscimus minores Applicatione uti in adiunctis culturalibus, educativis et familiaribus valde diversis, interdum sine eadem directione aliis praesto. Applicatio textum Bibliorum praebet, qui locos continet qui intellectum maturum vel contextum pastoralem requirere possunt. Quapropter parentes, tutores et communitates fidei vehementer hortamur ut omnem minorem qui Applicatione utitur dirigant et comitentur.</p>
+<p>Applicatio nullam publicitatem, nullas functiones sociales vel nuntiorum, nullumque contactum inter usuarios continet, nec ullum contentum externum praeter nexus facultativos auxilii crisis et attributionis Scripturarum habet. Nulla data personalia ab ullo usuario, minoribus inclusis, scienter colligit, et omne contentum solum in instrumento ipsius usuarii condit.</p>
+<p>Ulla emptio (ut Global Edition facultativa) ab applicationum taberna tractatur et auctorizationem possessoris rationis requirit. Parentes et tutores responsabiles sunt de emptionibus in instrumentis vel rationibus suis factis custodiendis.</p>
+
+<h2>12. Privatitas</h2>
+<p>Usus Applicationis etiam <a href="privacy-policy.html?lang=la">Politica Privatitatis</a> nostra regitur, quae his Condicionibus per relationem inseritur. Applicatio data personalia non colligit, in ullo servitore non condit nec transmittit.</p>
+
+<h2>13. Mutationes</h2>
+<p>Artistic Life Research ius sibi reservat has Condiciones quovis tempore renovandi. Mutationes substantiales die vigoris renovato reflectentur. Usus Applicationis continuatus post mutationes acceptationem Condicionum revisarum constituit.</p>
+
+<h2>14. Lex Gubernans et Solutio Controversiarum</h2>
+<p>Hae Condiciones legibus Iaponiae reguntur. Ulla controversia ex his Condicionibus vel Applicatione orta vel ad eas pertinens iurisdictioni exclusivae tribunalium Iaponiae subicietur. Attamen, si consumptor es, haec electio legis et fori solum quantum normae imperativae tutelae consumptoris regionis incolatus tui permittunt applicatur; ubi tales leges aliter statuunt, praevalent, et procedere potes apud tribunalia regionis incolatus tui.</p>
+
+<div class="region-note">
+<strong>Pro consumptoribus:</strong> Nihil in his Condicionibus iura tua sub normis imperativis tutelae consumptoris regionis incolatus tui limitat. Ubi tales dispositiones locales imperativae applicantur, super hanc clausulam legis gubernantis praevalent quocumque loco sis, et reclamationes etiam apud tribunalia regionis incolatus tui afferre potes. Hoc consumptoribus in qualibet iurisdictione applicatur, includentibus, sine limitatione, Unione Europaea et Spatio Oeconomico Europaeo.
+</div>
+
+<h2>15. Contactus et Querelae</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  Epistula electronica: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a><br>
+  Situs interretialis: <a href="https://artistic-life-research.com">https://artistic-life-research.com</a>
+</div>
+<p style="margin-top:1em;">De querelis ad iura auctoris, licentias vel contentum pertinentibus, quaeso <a href="https://artistic-life-research.com">situm nostrum</a> visita vel nos directe conveni. Intra 7 dies negotiales respondemus.</p>
+</div>
+
+<script>
+  var LEGAL_LANGS = ['en','es','pt','fr','de','it','ja','ko','zh','ru','ar','la'];
+  var TRANSLATED  = ['en','es','pt','ja','fr','de','it','ko','zh','ru','ar','la'];   /* all 12 fully translated */
+  var PENDING_NOTE = {};   /* none pending — every language is fully translated */
+  function showLang(l) {
+    if (LEGAL_LANGS.indexOf(l) < 0) l = 'en';
+    var shown = (TRANSLATED.indexOf(l) >= 0) ? l : 'en';
+    document.querySelectorAll('.lang-content').forEach(function(d) {
+      d.classList.toggle('active', d.dataset.lang === shown);
+    });
+    /* Pending-language banner inside the shown (English) block */
+    var existing = document.getElementById('pendingBanner');
+    if (existing) existing.parentNode.removeChild(existing);
+    if (shown === 'en' && l !== 'en' && PENDING_NOTE[l]) {
+      var enBlock = document.querySelector('.lang-content[data-lang="en"]');
+      if (enBlock) {
+        var b = document.createElement('div');
+        b.id = 'pendingBanner';
+        b.className = 'gov-note';
+        b.setAttribute('dir', l === 'ar' ? 'rtl' : 'ltr');
+        b.textContent = PENDING_NOTE[l];
+        enBlock.insertBefore(b, enBlock.firstChild);
+      }
+    }
+    document.documentElement.lang = l;
+    document.documentElement.dir = (l === 'ar') ? 'rtl' : 'ltr';
+    var sel = document.getElementById('langSelect');
+    if (sel) sel.value = l;
+    try { localStorage.setItem('bp_legal_lang', l); } catch(e) {}
+  }
+  (function() {
+    var saved = null; try { saved = localStorage.getItem('bp_legal_lang'); } catch(e) {}
+    var nav = (navigator.language || 'en').toLowerCase().split('-')[0];
+    var qs = (location.search.match(/[?&]lang=([a-z]{2})/) || [])[1];
+    var pick = (qs && LEGAL_LANGS.indexOf(qs) >= 0) ? qs
+             : (saved && LEGAL_LANGS.indexOf(saved) >= 0) ? saved
+             : (LEGAL_LANGS.indexOf(nav) >= 0 ? nav : 'en');
+    showLang(pick);
+  })();
+</script>
 
 </body>
 </html>

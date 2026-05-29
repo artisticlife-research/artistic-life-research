@@ -7,12 +7,8 @@
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 24px 16px;
-    line-height: 1.7;
-    color: #1a1a1a;
-    background: #faf8f4;
+    max-width: 720px; margin: 0 auto; padding: 24px 16px; line-height: 1.7;
+    color: #1a1a1a; background: #faf8f4;
   }
   h1 { font-size: 1.6rem; margin-bottom: 0.2em; }
   h2 { font-size: 1.15rem; margin-top: 2em; border-bottom: 1px solid #ede8dc; padding-bottom: 4px; }
@@ -21,12 +17,40 @@
   .updated { color: #5a5248; font-size: 0.9rem; }
   .contact { background: #f5f0e8; padding: 12px 16px; border-radius: 6px; margin-top: 2em; }
   a { color: #7a6830; }
+  .lang-switch { display: flex; align-items: center; gap: 8px; justify-content: flex-end; margin-bottom: 8px; }
+  .lang-switch select { font-size: 0.9rem; padding: 5px 8px; border: 1px solid #ddd6c8; border-radius: 6px; background: #fffdf8; color: #3a3028; }
+  .gov-note { background: #f3efe6; border: 1px solid #e4dcc8; padding: 8px 14px; margin: 1em 0; font-size: 0.85rem; border-radius: 6px; color: #5a5248; }
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
+  html[dir="rtl"] .lang-switch { justify-content: flex-start; }
+  html[dir="rtl"] ul { padding-left: 0; padding-right: 1.4em; }
 </style>
 </head>
 <body>
 
+<div class="lang-switch">
+  <span aria-hidden="true">🌐</span>
+  <select id="langSelect" onchange="showLang(this.value)" aria-label="Language">
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="pt">Português</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="it">Italiano</option>
+    <option value="ja">日本語</option>
+    <option value="ko">한국어</option>
+    <option value="zh">中文</option>
+    <option value="ru">Русский</option>
+    <option value="ar">العربية</option>
+    <option value="la">Latina</option>
+  </select>
+</div>
+
+<!-- ═══════════════ ENGLISH (authoritative) ═══════════════ -->
+<div class="lang-content" data-lang="en">
 <h1>Privacy Policy — Bible Peace</h1>
-<p class="updated">Last updated: May 24, 2026</p>
+<p class="updated">Last updated: May 29, 2026</p>
+<div class="gov-note">This document is written in English, which is the governing language of this Privacy Policy. Translations into other languages are provided for convenience only; in case of any discrepancy, the English version prevails.</div>
 
 <h2>1. About This Policy</h2>
 <p>This Privacy Policy describes how Bible Peace ("the App") handles information. The App is developed and provided by Artistic Life Research.</p>
@@ -98,6 +122,889 @@
   <strong>Artistic Life Research</strong><br>
   Email: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
 </div>
+</div>
+
+<!-- ═══════════════ 日本語 (Japanese) ═══════════════ -->
+<div class="lang-content" data-lang="ja">
+<h1>プライバシーポリシー — Bible Peace</h1>
+<p class="updated">最終更新日：2026年5月29日</p>
+<div class="gov-note">これは便宜のための翻訳です。本ポリシーの正本は英語版であり、相違がある場合は英語版が優先します。</div>
+
+<h2>1. 本ポリシーについて</h2>
+<p>本プライバシーポリシーは、Bible Peace（以下「本アプリ」）が情報をどのように取り扱うかを説明するものです。本アプリは Artistic Life Research が開発・提供しています。</p>
+<p>Bible Peace は、12言語の旧約・新約聖書本文をキーワード検索し、関連する聖句を見つける手助けをする聖書コンパニオンアプリです。本アプリは、信仰上の助言・感情的なガイダンス・独自の宗教的コンテンツを生成するために人工知能を使用しません。</p>
+<p>本ポリシーについてご質問がある場合は、<a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a> までご連絡ください。</p>
+
+<h2>2. 当社が収集しない情報</h2>
+<p>本アプリは、以下の種類の情報を収集・サーバー保存・第三者への送信のいずれも行いません：</p>
+<ul>
+  <li>個人情報（氏名、メールアドレス、電話番号、住所、生年月日など）</li>
+  <li>位置情報</li>
+  <li>デバイス識別子または広告ID</li>
+  <li>利用解析や行動データ</li>
+  <li>財務情報や決済情報</li>
+  <li>写真、動画、音声</li>
+  <li>連絡先リスト、カレンダーデータ、メッセージ</li>
+</ul>
+<p>本アプリは、ユーザー登録・ログイン・いかなるアカウント作成も必要としません。</p>
+
+<h2>3. デバイスに保存されるデータ</h2>
+<p>本アプリは、あなたが作成した設定やコンテンツを保存するため、デバイスのローカルストレージを使用します：</p>
+<ul>
+  <li>言語設定</li>
+  <li>保存した聖句やブックマーク</li>
+  <li>日記・ジャーナルの記録</li>
+  <li>祈りの意図</li>
+  <li>日替り聖句の閲覧履歴</li>
+</ul>
+<p>これらのデータはすべて、あなたのデバイス内にのみ保存されます。外部サーバーやクラウドサービスへのアップロード・同期・送信は一切行われません。本アプリをアンインストールするか、デバイスの設定からデータを消去すると、これらのローカル保存データは完全に削除されます。</p>
+
+<h2>4. ネットワークアクセス</h2>
+<p>本アプリは Android の INTERNET 権限を宣言しています。バージョン1.1（2026年4月7日更新）の時点で、<strong>本アプリは通常の動作中に外部ネットワークリクエストを行いません。</strong></p>
+<p>本アプリが参照する唯一の外部宛先は、あなたがブラウザで開くことを選べるリンクのみです：安全情報内に表示される危機支援の窓口検索（<a href="https://findahelpline.com">findahelpline.com</a>）と、パブリックドメイン聖書の出典帰属ページです。本アプリはこれらのサイトにデータを送信しません。タップした場合にのみ開き、訪問後はそれぞれのサイトのプライバシーポリシーが適用されます。</p>
+<p>すべてのフォント（Cormorant Garamond および Lato）は本アプリに同梱され、デバイスから提供されます。Google Fonts その他の外部サーバーへのフォントリクエストは行いません。</p>
+<p>すべての聖書本文・翻訳・検索インデックス・アプリのコンテンツは本アプリに同梱されており、インターネット接続なしで完全に利用できます。</p>
+<p><em>注：2026年4月7日より前は、本アプリは Google Fonts（fonts.googleapis.com / fonts.gstatic.com）からフォントを読み込んでおり、HTTPリクエストの副次的結果としてデバイスのIPアドレスが Google に送信されていました。この外部依存は削除されました。</em></p>
+
+<h2>5. 第三者サービス</h2>
+<p>本アプリは、以下のいずれも統合していません：</p>
+<ul>
+  <li>解析サービス（Google Analytics、Firebase Analytics 等は不使用）</li>
+  <li>クラッシュ・エラー報告サービス</li>
+  <li>広告ネットワークや広告SDK</li>
+  <li>ソーシャルメディアのログイン・共有SDK</li>
+  <li>クラウドストレージ・バックアップ・同期サービス</li>
+  <li>プッシュ通知サービス</li>
+  <li>外部フォントサービス（フォントはアプリ内に自己ホスト）</li>
+</ul>
+<p>本アプリは外部ネットワークリクエストを行いません。すべてのコンテンツはオフラインで利用できます。</p>
+
+<h2>6. クッキーとトラッキング</h2>
+<p>本アプリは、クッキー、ウェブビーコン、ピクセル、その他類似のトラッキング技術を使用しません。</p>
+
+<h2>7. 子どものプライバシー</h2>
+<p>本アプリは、13歳未満（またはお住まいの国で定めるデジタル同意年齢未満）の子どもを特に対象とするものではありません。本アプリは、子どもを含むいかなるユーザーからも、個人情報を意図的に収集しません。</p>
+
+<h2>8. データの削除</h2>
+<p>本アプリはいかなるサーバーにもデータを収集・保存しないため、サーバー側に削除すべきデータはありません。ローカルに保存されたすべてのデータ（保存した聖句、日記、設定）を削除するには：</p>
+<ul>
+  <li>デバイスの「設定 &gt; アプリ &gt; Bible Peace &gt; データを消去」からアプリのデータを消去する</li>
+  <li>本アプリをアンインストールする</li>
+</ul>
+
+<h2>9. 本ポリシーの変更</h2>
+<p>当社は、本プライバシーポリシーを随時更新する場合があります。変更は本文書冒頭の「最終更新日」に反映されます。変更後も本アプリを継続して利用した場合、改訂後のポリシーに同意したものとみなされます。</p>
+
+<h2>10. お問い合わせ</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  メール：<a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
+</div>
+</div>
+
+<!-- ═══════════════ Español (Spanish) ═══════════════ -->
+<div class="lang-content" data-lang="es">
+<h1>Política de Privacidad — Bible Peace</h1>
+<p class="updated">Última actualización: 29 de mayo de 2026</p>
+<div class="gov-note">Esta es una traducción de cortesía. La versión en inglés es la versión jurídicamente vinculante de esta Política de Privacidad; en caso de discrepancia, prevalece el texto en inglés.</div>
+
+<h2>1. Acerca de esta política</h2>
+<p>Esta Política de Privacidad describe cómo Bible Peace ("la App") trata la información. La App es desarrollada y proporcionada por Artistic Life Research.</p>
+<p>Bible Peace es una app complementaria de las Escrituras que ayuda a los usuarios a encontrar versículos relevantes mediante búsqueda por palabras clave en los textos del Antiguo y el Nuevo Testamento en 12 idiomas. La App no utiliza inteligencia artificial para generar consejos espirituales, orientación emocional ni contenido religioso original.</p>
+<p>Si tiene alguna pregunta sobre esta política, contáctenos en: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a></p>
+
+<h2>2. Información que no recopilamos</h2>
+<p>La App no recopila, no almacena en ningún servidor ni transmite a terceros los siguientes tipos de información:</p>
+<ul>
+  <li>Información personal (nombre, correo electrónico, número de teléfono, dirección física, fecha de nacimiento, etc.)</li>
+  <li>Datos de ubicación</li>
+  <li>Identificadores de dispositivo o IDs de publicidad</li>
+  <li>Analíticas de uso o datos de comportamiento</li>
+  <li>Información financiera o de pago</li>
+  <li>Fotos, vídeos o audio</li>
+  <li>Listas de contactos, datos de calendario o mensajes</li>
+</ul>
+<p>La App no requiere registro de usuario, inicio de sesión ni creación de cuenta de ningún tipo.</p>
+
+<h2>3. Datos almacenados en su dispositivo</h2>
+<p>La App utiliza el almacenamiento local de su dispositivo para guardar las preferencias y el contenido que usted crea:</p>
+<ul>
+  <li>Preferencia de idioma</li>
+  <li>Versículos guardados y marcadores</li>
+  <li>Entradas del diario</li>
+  <li>Intenciones de oración</li>
+  <li>Historial de visualización del versículo diario</li>
+</ul>
+<p>Todos estos datos se almacenan exclusivamente en su dispositivo. Nunca se suben, sincronizan ni transmiten a ningún servidor externo o servicio en la nube. Si desinstala la App o borra sus datos desde la configuración del dispositivo, estos datos almacenados localmente se eliminarán de forma permanente.</p>
+
+<h2>4. Acceso a la red</h2>
+<p>La App declara el permiso INTERNET de Android. A partir de la versión 1.1 (actualizada el 7 de abril de 2026), <strong>la App no realiza solicitudes de red externas durante el funcionamiento normal.</strong></p>
+<p>Los únicos destinos externos a los que la App hace referencia son enlaces que usted puede optar por abrir en su navegador: un directorio de apoyo en crisis (<a href="https://findahelpline.com">findahelpline.com</a>) que se muestra en la información de seguridad de la App, y páginas de atribución de las fuentes de las Escrituras de dominio público. La App no envía datos a estos sitios; solo se abren si usted los toca, y una vez que los visita se aplican sus propias políticas de privacidad.</p>
+<p>Todas las fuentes tipográficas (Cormorant Garamond y Lato) están incluidas en la App y se sirven desde el dispositivo. No se realizan solicitudes de fuentes a Google Fonts ni a ningún otro servidor externo.</p>
+<p>Todos los textos de las Escrituras, traducciones, índices de búsqueda y contenido de la aplicación están incluidos en la App y disponibles por completo sin conexión a internet.</p>
+<p><em>Nota: Antes del 7 de abril de 2026, la App cargaba fuentes desde Google Fonts (fonts.googleapis.com / fonts.gstatic.com), lo que transmitía la dirección IP del dispositivo a Google como efecto secundario de la solicitud HTTP. Esta dependencia externa ha sido eliminada.</em></p>
+
+<h2>5. Servicios de terceros</h2>
+<p>La App no integra ninguno de los siguientes:</p>
+<ul>
+  <li>Servicios de analítica (sin Google Analytics, Firebase Analytics o similares)</li>
+  <li>Servicios de informe de fallos o errores</li>
+  <li>Redes publicitarias o SDK de anuncios</li>
+  <li>SDK de inicio de sesión o de compartir en redes sociales</li>
+  <li>Servicios de almacenamiento, copia de seguridad o sincronización en la nube</li>
+  <li>Servicios de notificaciones push</li>
+  <li>Servicios de fuentes externas (las fuentes se alojan dentro de la App)</li>
+</ul>
+<p>La App no realiza solicitudes de red externas. Todo el contenido está disponible sin conexión.</p>
+
+<h2>6. Cookies y seguimiento</h2>
+<p>La App no utiliza cookies, balizas web, píxeles ni ninguna tecnología de seguimiento similar.</p>
+
+<h2>7. Privacidad de los menores</h2>
+<p>La App no está dirigida específicamente a menores de 13 años (o la edad de consentimiento digital aplicable en su jurisdicción). La App no recopila conscientemente ninguna información personal de ningún usuario, incluidos los menores.</p>
+
+<h2>8. Eliminación de datos</h2>
+<p>Dado que la App no recopila ni almacena datos en ningún servidor, no hay datos del lado del servidor que eliminar. Para eliminar todos los datos almacenados localmente (versículos guardados, entradas del diario, preferencias), puede:</p>
+<ul>
+  <li>Borrar los datos de la App desde Ajustes &gt; Aplicaciones &gt; Bible Peace &gt; Borrar datos de su dispositivo</li>
+  <li>Desinstalar la App</li>
+</ul>
+
+<h2>9. Cambios en esta política</h2>
+<p>Podemos actualizar esta Política de Privacidad de vez en cuando. Cualquier cambio se reflejará en la fecha de "Última actualización" en la parte superior de este documento. El uso continuado de la App tras los cambios constituye la aceptación de la política revisada.</p>
+
+<h2>10. Contacto</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  Correo: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
+</div>
+</div>
+
+<!-- ═══════════════ Português (Portuguese) ═══════════════ -->
+<div class="lang-content" data-lang="pt">
+<h1>Política de Privacidade — Bible Peace</h1>
+<p class="updated">Última atualização: 29 de maio de 2026</p>
+<div class="gov-note">Esta é uma tradução de cortesia. A versão em inglês é a versão juridicamente vinculativa desta Política de Privacidade; em caso de divergência, prevalece o texto em inglês.</div>
+
+<h2>1. Sobre esta política</h2>
+<p>Esta Política de Privacidade descreve como o Bible Peace ("o App") trata as informações. O App é desenvolvido e fornecido pela Artistic Life Research.</p>
+<p>O Bible Peace é um app complementar das Escrituras que ajuda os usuários a encontrar versículos relevantes por meio de busca por palavras-chave nos textos do Antigo e do Novo Testamento em 12 idiomas. O App não usa inteligência artificial para gerar aconselhamento espiritual, orientação emocional ou conteúdo religioso original.</p>
+<p>Se você tiver dúvidas sobre esta política, entre em contato pelo e-mail: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a></p>
+
+<h2>2. Informações que não coletamos</h2>
+<p>O App não coleta, não armazena em nenhum servidor nem transmite a terceiros os seguintes tipos de informação:</p>
+<ul>
+  <li>Informações pessoais (nome, e-mail, telefone, endereço físico, data de nascimento, etc.)</li>
+  <li>Dados de localização</li>
+  <li>Identificadores de dispositivo ou IDs de publicidade</li>
+  <li>Análises de uso ou dados comportamentais</li>
+  <li>Informações financeiras ou de pagamento</li>
+  <li>Fotos, vídeos ou áudio</li>
+  <li>Listas de contatos, dados de calendário ou mensagens</li>
+</ul>
+<p>O App não exige registro de usuário, login nem criação de conta de qualquer tipo.</p>
+
+<h2>3. Dados armazenados no seu dispositivo</h2>
+<p>O App usa o armazenamento local do seu dispositivo para salvar as preferências e o conteúdo que você cria:</p>
+<ul>
+  <li>Preferência de idioma</li>
+  <li>Versículos salvos e marcadores</li>
+  <li>Entradas do diário</li>
+  <li>Intenções de oração</li>
+  <li>Histórico de visualização do versículo diário</li>
+</ul>
+<p>Todos esses dados são armazenados exclusivamente no seu dispositivo. Nunca são enviados, sincronizados ou transmitidos a nenhum servidor externo ou serviço de nuvem. Se você desinstalar o App ou limpar seus dados nas configurações do dispositivo, esses dados armazenados localmente serão excluídos permanentemente.</p>
+
+<h2>4. Acesso à rede</h2>
+<p>O App declara a permissão INTERNET do Android. A partir da versão 1.1 (atualizada em 7 de abril de 2026), <strong>o App não faz solicitações de rede externas durante a operação normal.</strong></p>
+<p>Os únicos destinos externos a que o App faz referência são links que você pode optar por abrir no navegador: um diretório de apoio em crise (<a href="https://findahelpline.com">findahelpline.com</a>) exibido nas informações de segurança do App, e páginas de atribuição das fontes das Escrituras de domínio público. O App não envia dados a esses sites; eles só abrem se você tocar neles e, ao visitá-los, aplicam-se as políticas de privacidade próprias deles.</p>
+<p>Todas as fontes (Cormorant Garamond e Lato) estão incluídas no App e são servidas a partir do dispositivo. Nenhuma solicitação de fonte é feita ao Google Fonts nem a qualquer outro servidor externo.</p>
+<p>Todos os textos das Escrituras, traduções, índices de busca e conteúdo do aplicativo estão incluídos no App e totalmente disponíveis sem conexão com a internet.</p>
+<p><em>Observação: Antes de 7 de abril de 2026, o App carregava fontes do Google Fonts (fonts.googleapis.com / fonts.gstatic.com), o que transmitia o endereço IP do dispositivo ao Google como efeito colateral da solicitação HTTP. Essa dependência externa foi removida.</em></p>
+
+<h2>5. Serviços de terceiros</h2>
+<p>O App não integra nenhum dos seguintes:</p>
+<ul>
+  <li>Serviços de análise (sem Google Analytics, Firebase Analytics ou similares)</li>
+  <li>Serviços de relatório de falhas ou erros</li>
+  <li>Redes de publicidade ou SDKs de anúncios</li>
+  <li>SDKs de login ou compartilhamento em redes sociais</li>
+  <li>Serviços de armazenamento, backup ou sincronização na nuvem</li>
+  <li>Serviços de notificação push</li>
+  <li>Serviços de fontes externas (as fontes são hospedadas dentro do App)</li>
+</ul>
+<p>O App não faz solicitações de rede externas. Todo o conteúdo está disponível offline.</p>
+
+<h2>6. Cookies e rastreamento</h2>
+<p>O App não usa cookies, web beacons, pixels nem qualquer tecnologia de rastreamento semelhante.</p>
+
+<h2>7. Privacidade das crianças</h2>
+<p>O App não é direcionado especificamente a crianças menores de 13 anos (ou a idade de consentimento digital aplicável na sua jurisdição). O App não coleta intencionalmente nenhuma informação pessoal de nenhum usuário, incluindo crianças.</p>
+
+<h2>8. Exclusão de dados</h2>
+<p>Como o App não coleta nem armazena dados em nenhum servidor, não há dados do lado do servidor a serem excluídos. Para remover todos os dados armazenados localmente (versículos salvos, entradas do diário, preferências), você pode:</p>
+<ul>
+  <li>Limpar os dados do App em Configurações &gt; Aplicativos &gt; Bible Peace &gt; Limpar dados do seu dispositivo</li>
+  <li>Desinstalar o App</li>
+</ul>
+
+<h2>9. Alterações nesta política</h2>
+<p>Podemos atualizar esta Política de Privacidade periodicamente. Quaisquer alterações serão refletidas na data de "Última atualização" no topo deste documento. O uso contínuo do App após as alterações constitui aceitação da política revisada.</p>
+
+<h2>10. Contato</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  E-mail: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
+</div>
+</div>
+
+<!-- ═══════════════ Français (French) ═══════════════ -->
+<div class="lang-content" data-lang="fr">
+<h1>Politique de confidentialité — Bible Peace</h1>
+<p class="updated">Dernière mise à jour : 29 mai 2026</p>
+<div class="gov-note">Ceci est une traduction de courtoisie. La version anglaise est la version juridiquement contraignante de cette Politique de confidentialité ; en cas de divergence, le texte anglais prévaut.</div>
+
+<h2>1. À propos de cette politique</h2>
+<p>Cette Politique de confidentialité décrit la manière dont Bible Peace (« l’App ») traite les informations. L’App est développée et fournie par Artistic Life Research.</p>
+<p>Bible Peace est une application compagnon des Écritures qui aide les utilisateurs à trouver des versets pertinents par recherche par mots-clés dans les textes de l’Ancien et du Nouveau Testament en 12 langues. L’App n’utilise pas d’intelligence artificielle pour générer des conseils spirituels, un accompagnement émotionnel ou un contenu religieux original.</p>
+<p>Pour toute question concernant cette politique, contactez-nous à : <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a></p>
+
+<h2>2. Informations que nous ne collectons pas</h2>
+<p>L’App ne collecte pas, ne stocke sur aucun serveur et ne transmet à aucun tiers les types d’informations suivants :</p>
+<ul>
+  <li>Informations personnelles (nom, adresse e-mail, numéro de téléphone, adresse postale, date de naissance, etc.)</li>
+  <li>Données de localisation</li>
+  <li>Identifiants d’appareil ou identifiants publicitaires</li>
+  <li>Statistiques d’utilisation ou données comportementales</li>
+  <li>Informations financières ou de paiement</li>
+  <li>Photos, vidéos ou audio</li>
+  <li>Listes de contacts, données de calendrier ou messages</li>
+</ul>
+<p>L’App ne nécessite aucune inscription, connexion ni création de compte d’aucune sorte.</p>
+
+<h2>3. Données stockées sur votre appareil</h2>
+<p>L’App utilise le stockage local de votre appareil pour enregistrer les préférences et le contenu que vous créez :</p>
+<ul>
+  <li>Préférence de langue</li>
+  <li>Versets enregistrés et favoris</li>
+  <li>Entrées du journal</li>
+  <li>Intentions de prière</li>
+  <li>Historique de consultation du verset quotidien</li>
+</ul>
+<p>Toutes ces données sont stockées exclusivement sur votre appareil. Elles ne sont jamais téléversées, synchronisées ni transmises à un serveur externe ou à un service cloud. Si vous désinstallez l’App ou effacez ses données via les paramètres de votre appareil, ces données stockées localement seront définitivement supprimées.</p>
+
+<h2>4. Accès au réseau</h2>
+<p>L’App déclare la permission INTERNET d’Android. Depuis la version 1.1 (mise à jour le 7 avril 2026), <strong>l’App n’effectue aucune requête réseau externe lors d’un fonctionnement normal.</strong></p>
+<p>Les seules destinations externes auxquelles l’App fait référence sont des liens que vous pouvez choisir d’ouvrir dans votre navigateur : un annuaire de soutien en cas de crise (<a href="https://findahelpline.com">findahelpline.com</a>) affiché dans les informations de sécurité de l’App, et des pages d’attribution des sources scripturaires du domaine public. L’App n’envoie aucune donnée à ces sites ; ils ne s’ouvrent que si vous les touchez, et une fois que vous les visitez, leurs propres politiques de confidentialité s’appliquent.</p>
+<p>Toutes les polices (Cormorant Garamond et Lato) sont intégrées à l’App et servies depuis l’appareil. Aucune requête de police n’est envoyée à Google Fonts ni à aucun autre serveur externe.</p>
+<p>Tous les textes scripturaires, traductions, index de recherche et contenus de l’application sont intégrés à l’App et entièrement disponibles sans connexion internet.</p>
+<p><em>Remarque : Avant le 7 avril 2026, l’App chargeait les polices depuis Google Fonts (fonts.googleapis.com / fonts.gstatic.com), ce qui transmettait l’adresse IP de l’appareil à Google comme effet secondaire de la requête HTTP. Cette dépendance externe a été supprimée.</em></p>
+
+<h2>5. Services tiers</h2>
+<p>L’App n’intègre aucun des éléments suivants :</p>
+<ul>
+  <li>Services d’analyse (pas de Google Analytics, Firebase Analytics ou similaire)</li>
+  <li>Services de signalement de plantages ou d’erreurs</li>
+  <li>Réseaux publicitaires ou SDK publicitaires</li>
+  <li>SDK de connexion ou de partage sur les réseaux sociaux</li>
+  <li>Services de stockage, de sauvegarde ou de synchronisation cloud</li>
+  <li>Services de notifications push</li>
+  <li>Services de polices externes (les polices sont auto-hébergées dans l’App)</li>
+</ul>
+<p>L’App n’effectue aucune requête réseau externe. Tout le contenu est disponible hors ligne.</p>
+
+<h2>6. Cookies et suivi</h2>
+<p>L’App n’utilise pas de cookies, de balises web, de pixels ni aucune technologie de suivi similaire.</p>
+
+<h2>7. Confidentialité des enfants</h2>
+<p>L’App ne s’adresse pas spécifiquement aux enfants de moins de 13 ans (ou l’âge du consentement numérique applicable dans votre juridiction). L’App ne collecte sciemment aucune information personnelle d’aucun utilisateur, y compris les enfants.</p>
+
+<h2>8. Suppression des données</h2>
+<p>Étant donné que l’App ne collecte ni ne stocke de données sur aucun serveur, il n’y a aucune donnée côté serveur à supprimer. Pour supprimer toutes les données stockées localement (versets enregistrés, entrées de journal, préférences), vous pouvez :</p>
+<ul>
+  <li>Effacer les données de l’App via Paramètres &gt; Applications &gt; Bible Peace &gt; Effacer les données de votre appareil</li>
+  <li>Désinstaller l’App</li>
+</ul>
+
+<h2>9. Modifications de cette politique</h2>
+<p>Nous pouvons mettre à jour cette Politique de confidentialité de temps à autre. Toute modification sera reflétée dans la date de « Dernière mise à jour » en haut de ce document. L’utilisation continue de l’App après les modifications constitue l’acceptation de la politique révisée.</p>
+
+<h2>10. Contact</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  E-mail : <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
+</div>
+</div>
+
+<!-- ═══════════════ Deutsch (German) ═══════════════ -->
+<div class="lang-content" data-lang="de">
+<h1>Datenschutzerklärung — Bible Peace</h1>
+<p class="updated">Zuletzt aktualisiert: 29. Mai 2026</p>
+<div class="gov-note">Dies ist eine Übersetzung zur Erleichterung. Die englische Fassung ist die rechtlich verbindliche Fassung dieser Datenschutzerklärung; bei Abweichungen hat der englische Text Vorrang.</div>
+
+<h2>1. Über diese Erklärung</h2>
+<p>Diese Datenschutzerklärung beschreibt, wie Bible Peace („die App“) mit Informationen umgeht. Die App wird von Artistic Life Research entwickelt und bereitgestellt.</p>
+<p>Bible Peace ist eine Begleit-App für die Heilige Schrift, die Nutzern hilft, relevante Bibelverse durch Stichwortsuche in den Texten des Alten und Neuen Testaments in 12 Sprachen zu finden. Die App verwendet keine künstliche Intelligenz, um geistlichen Rat, emotionale Begleitung oder originäre religiöse Inhalte zu erzeugen.</p>
+<p>Bei Fragen zu dieser Erklärung kontaktieren Sie uns bitte unter: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a></p>
+
+<h2>2. Informationen, die wir nicht erheben</h2>
+<p>Die App erhebt die folgenden Arten von Informationen nicht, speichert sie auf keinem Server und übermittelt sie an keine Dritten:</p>
+<ul>
+  <li>Personenbezogene Daten (Name, E-Mail-Adresse, Telefonnummer, Anschrift, Geburtsdatum usw.)</li>
+  <li>Standortdaten</li>
+  <li>Gerätekennungen oder Werbe-IDs</li>
+  <li>Nutzungsanalysen oder Verhaltensdaten</li>
+  <li>Finanz- oder Zahlungsinformationen</li>
+  <li>Fotos, Videos oder Audio</li>
+  <li>Kontaktlisten, Kalenderdaten oder Nachrichten</li>
+</ul>
+<p>Die App erfordert keine Registrierung, keine Anmeldung und keine Kontoerstellung jeglicher Art.</p>
+
+<h2>3. Auf Ihrem Gerät gespeicherte Daten</h2>
+<p>Die App nutzt den lokalen Speicher Ihres Geräts, um Einstellungen und von Ihnen erstellte Inhalte zu speichern:</p>
+<ul>
+  <li>Spracheinstellung</li>
+  <li>Gespeicherte Verse und Lesezeichen</li>
+  <li>Tagebucheinträge</li>
+  <li>Gebetsanliegen</li>
+  <li>Verlauf der angesehenen Tagesverse</li>
+</ul>
+<p>Alle diese Daten werden ausschließlich auf Ihrem Gerät gespeichert. Sie werden niemals hochgeladen, synchronisiert oder an einen externen Server oder Cloud-Dienst übermittelt. Wenn Sie die App deinstallieren oder ihre Daten über die Geräteeinstellungen löschen, werden diese lokal gespeicherten Daten dauerhaft gelöscht.</p>
+
+<h2>4. Netzwerkzugriff</h2>
+<p>Die App deklariert die Android-Berechtigung INTERNET. Seit Version 1.1 (aktualisiert am 7. April 2026) <strong>stellt die App im Normalbetrieb keine externen Netzwerkanfragen.</strong></p>
+<p>Die einzigen externen Ziele, auf die die App verweist, sind Links, die Sie in Ihrem Browser öffnen können: ein Verzeichnis für Krisenhilfe (<a href="https://findahelpline.com">findahelpline.com</a>), das in den Sicherheitsinformationen der App angezeigt wird, sowie Seiten zur Quellenangabe gemeinfreier Bibeltexte. Die App sendet keine Daten an diese Seiten; sie öffnen sich nur, wenn Sie darauf tippen, und sobald Sie sie besuchen, gelten deren eigene Datenschutzerklärungen.</p>
+<p>Alle Schriftarten (Cormorant Garamond und Lato) sind in der App enthalten und werden vom Gerät bereitgestellt. Es werden keine Schriftanfragen an Google Fonts oder einen anderen externen Server gestellt.</p>
+<p>Alle Bibeltexte, Übersetzungen, Suchindizes und App-Inhalte sind in der App enthalten und vollständig ohne Internetverbindung verfügbar.</p>
+<p><em>Hinweis: Vor dem 7. April 2026 lud die App Schriftarten von Google Fonts (fonts.googleapis.com / fonts.gstatic.com), wodurch als Nebeneffekt der HTTP-Anfrage die IP-Adresse des Geräts an Google übermittelt wurde. Diese externe Abhängigkeit wurde entfernt.</em></p>
+
+<h2>5. Dienste von Drittanbietern</h2>
+<p>Die App integriert keine der folgenden Dienste:</p>
+<ul>
+  <li>Analysedienste (kein Google Analytics, Firebase Analytics o. Ä.)</li>
+  <li>Absturz- oder Fehlerberichtsdienste</li>
+  <li>Werbenetzwerke oder Werbe-SDKs</li>
+  <li>SDKs für Social-Media-Anmeldung oder -Freigabe</li>
+  <li>Cloud-Speicher-, Backup- oder Synchronisierungsdienste</li>
+  <li>Push-Benachrichtigungsdienste</li>
+  <li>Externe Schriftartendienste (Schriftarten werden in der App selbst gehostet)</li>
+</ul>
+<p>Die App stellt keine externen Netzwerkanfragen. Alle Inhalte sind offline verfügbar.</p>
+
+<h2>6. Cookies und Tracking</h2>
+<p>Die App verwendet keine Cookies, Web-Beacons, Pixel oder ähnliche Tracking-Technologien.</p>
+
+<h2>7. Datenschutz von Kindern</h2>
+<p>Die App richtet sich nicht speziell an Kinder unter 13 Jahren (oder dem in Ihrer Rechtsordnung geltenden Alter der digitalen Einwilligung). Die App erhebt wissentlich keine personenbezogenen Daten von Nutzern, einschließlich Kindern.</p>
+
+<h2>8. Datenlöschung</h2>
+<p>Da die App keine Daten auf einem Server erhebt oder speichert, gibt es keine serverseitigen Daten zu löschen. Um alle lokal gespeicherten Daten (gespeicherte Verse, Tagebucheinträge, Einstellungen) zu entfernen, können Sie:</p>
+<ul>
+  <li>Die Daten der App über Einstellungen &gt; Apps &gt; Bible Peace &gt; Daten löschen Ihres Geräts löschen</li>
+  <li>Die App deinstallieren</li>
+</ul>
+
+<h2>9. Änderungen dieser Erklärung</h2>
+<p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Etwaige Änderungen werden im Datum „Zuletzt aktualisiert“ oben in diesem Dokument widergespiegelt. Die fortgesetzte Nutzung der App nach Änderungen gilt als Annahme der überarbeiteten Erklärung.</p>
+
+<h2>10. Kontakt</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  E-Mail: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
+</div>
+</div>
+
+<!-- ═══════════════ Italiano (Italian) ═══════════════ -->
+<div class="lang-content" data-lang="it">
+<h1>Informativa sulla privacy — Bible Peace</h1>
+<p class="updated">Ultimo aggiornamento: 29 maggio 2026</p>
+<div class="gov-note">Questa è una traduzione di cortesia. La versione inglese è la versione giuridicamente vincolante della presente Informativa sulla privacy; in caso di discrepanza, prevale il testo inglese.</div>
+
+<h2>1. Informazioni su questa informativa</h2>
+<p>La presente Informativa sulla privacy descrive come Bible Peace (« l’App ») tratta le informazioni. L’App è sviluppata e fornita da Artistic Life Research.</p>
+<p>Bible Peace è un’app companion delle Scritture che aiuta gli utenti a trovare versetti pertinenti tramite ricerca per parole chiave nei testi dell’Antico e del Nuovo Testamento in 12 lingue. L’App non utilizza intelligenza artificiale per generare consigli spirituali, supporto emotivo o contenuti religiosi originali.</p>
+<p>Per qualsiasi domanda su questa informativa, contattaci all’indirizzo: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a></p>
+
+<h2>2. Informazioni che non raccogliamo</h2>
+<p>L’App non raccoglie, non memorizza su alcun server né trasmette a terzi le seguenti tipologie di informazioni:</p>
+<ul>
+  <li>Informazioni personali (nome, indirizzo e-mail, numero di telefono, indirizzo fisico, data di nascita, ecc.)</li>
+  <li>Dati di posizione</li>
+  <li>Identificatori del dispositivo o ID pubblicitari</li>
+  <li>Analisi d’uso o dati comportamentali</li>
+  <li>Informazioni finanziarie o di pagamento</li>
+  <li>Foto, video o audio</li>
+  <li>Elenchi di contatti, dati del calendario o messaggi</li>
+</ul>
+<p>L’App non richiede registrazione dell’utente, accesso né creazione di alcun account.</p>
+
+<h2>3. Dati memorizzati sul tuo dispositivo</h2>
+<p>L’App utilizza la memoria locale del tuo dispositivo per salvare le preferenze e i contenuti che crei:</p>
+<ul>
+  <li>Preferenza di lingua</li>
+  <li>Versetti salvati e segnalibri</li>
+  <li>Voci del diario</li>
+  <li>Intenzioni di preghiera</li>
+  <li>Cronologia di visualizzazione del versetto giornaliero</li>
+</ul>
+<p>Tutti questi dati sono memorizzati esclusivamente sul tuo dispositivo. Non vengono mai caricati, sincronizzati né trasmessi a server esterni o servizi cloud. Se disinstalli l’App o ne cancelli i dati dalle impostazioni del dispositivo, questi dati memorizzati localmente verranno eliminati definitivamente.</p>
+
+<h2>4. Accesso alla rete</h2>
+<p>L’App dichiara l’autorizzazione INTERNET di Android. A partire dalla versione 1.1 (aggiornata il 7 aprile 2026), <strong>l’App non effettua richieste di rete esterne durante il normale funzionamento.</strong></p>
+<p>Le uniche destinazioni esterne a cui l’App fa riferimento sono link che puoi scegliere di aprire nel browser: una directory di supporto in caso di crisi (<a href="https://findahelpline.com">findahelpline.com</a>) mostrata nelle informazioni di sicurezza dell’App, e pagine di attribuzione delle fonti scritturali di pubblico dominio. L’App non invia dati a questi siti; si aprono solo se li tocchi e, una volta visitati, si applicano le loro stesse informative sulla privacy.</p>
+<p>Tutti i caratteri (Cormorant Garamond e Lato) sono inclusi nell’App e forniti dal dispositivo. Non vengono effettuate richieste di caratteri a Google Fonts né ad alcun altro server esterno.</p>
+<p>Tutti i testi scritturali, le traduzioni, gli indici di ricerca e i contenuti dell’applicazione sono inclusi nell’App e pienamente disponibili senza connessione a internet.</p>
+<p><em>Nota: Prima del 7 aprile 2026, l’App caricava i caratteri da Google Fonts (fonts.googleapis.com / fonts.gstatic.com), il che trasmetteva l’indirizzo IP del dispositivo a Google come effetto collaterale della richiesta HTTP. Questa dipendenza esterna è stata rimossa.</em></p>
+
+<h2>5. Servizi di terze parti</h2>
+<p>L’App non integra nessuno dei seguenti:</p>
+<ul>
+  <li>Servizi di analisi (nessun Google Analytics, Firebase Analytics o simili)</li>
+  <li>Servizi di segnalazione di arresti anomali o errori</li>
+  <li>Reti pubblicitarie o SDK pubblicitari</li>
+  <li>SDK di accesso o condivisione sui social media</li>
+  <li>Servizi di archiviazione, backup o sincronizzazione cloud</li>
+  <li>Servizi di notifiche push</li>
+  <li>Servizi di caratteri esterni (i caratteri sono ospitati all’interno dell’App)</li>
+</ul>
+<p>L’App non effettua richieste di rete esterne. Tutti i contenuti sono disponibili offline.</p>
+
+<h2>6. Cookie e tracciamento</h2>
+<p>L’App non utilizza cookie, web beacon, pixel né alcuna tecnologia di tracciamento simile.</p>
+
+<h2>7. Privacy dei minori</h2>
+<p>L’App non è rivolta specificamente a minori di 13 anni (o all’età del consenso digitale applicabile nella tua giurisdizione). L’App non raccoglie consapevolmente alcuna informazione personale da alcun utente, inclusi i minori.</p>
+
+<h2>8. Eliminazione dei dati</h2>
+<p>Poiché l’App non raccoglie né memorizza dati su alcun server, non vi sono dati lato server da eliminare. Per rimuovere tutti i dati memorizzati localmente (versetti salvati, voci del diario, preferenze), puoi:</p>
+<ul>
+  <li>Cancellare i dati dell’App da Impostazioni &gt; App &gt; Bible Peace &gt; Cancella dati del tuo dispositivo</li>
+  <li>Disinstallare l’App</li>
+</ul>
+
+<h2>9. Modifiche a questa informativa</h2>
+<p>Potremmo aggiornare questa Informativa sulla privacy di tanto in tanto. Eventuali modifiche saranno riflesse nella data di « Ultimo aggiornamento » in cima a questo documento. L’uso continuato dell’App dopo le modifiche costituisce accettazione dell’informativa rivista.</p>
+
+<h2>10. Contatti</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  E-mail: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
+</div>
+</div>
+
+<!-- ═══════════════ 한국어 (Korean) ═══════════════ -->
+<div class="lang-content" data-lang="ko">
+<h1>개인정보처리방침 — Bible Peace</h1>
+<p class="updated">최종 업데이트: 2026년 5월 29일</p>
+<div class="gov-note">이것은 편의를 위한 번역입니다. 본 개인정보처리방침의 법적 정본은 영어판이며, 상충하는 경우 영어판이 우선합니다.</div>
+
+<h2>1. 본 방침에 대하여</h2>
+<p>본 개인정보처리방침은 Bible Peace(이하 "앱")가 정보를 어떻게 처리하는지 설명합니다. 앱은 Artistic Life Research가 개발·제공합니다.</p>
+<p>Bible Peace는 12개 언어의 구약 및 신약 본문에서 키워드 검색으로 관련 성경 구절을 찾도록 돕는 성경 동반 앱입니다. 앱은 영적 조언, 정서적 안내 또는 독창적 종교 콘텐츠를 생성하기 위해 인공지능을 사용하지 않습니다.</p>
+<p>본 방침에 관한 문의는 다음으로 연락해 주십시오: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a></p>
+
+<h2>2. 수집하지 않는 정보</h2>
+<p>앱은 다음 유형의 정보를 수집하거나, 어떤 서버에도 저장하거나, 제3자에게 전송하지 않습니다:</p>
+<ul>
+  <li>개인정보(이름, 이메일 주소, 전화번호, 실제 주소, 생년월일 등)</li>
+  <li>위치 데이터</li>
+  <li>기기 식별자 또는 광고 ID</li>
+  <li>사용 분석 또는 행동 데이터</li>
+  <li>금융 또는 결제 정보</li>
+  <li>사진, 동영상 또는 오디오</li>
+  <li>연락처 목록, 캘린더 데이터 또는 메시지</li>
+</ul>
+<p>앱은 어떠한 사용자 등록, 로그인, 계정 생성도 요구하지 않습니다.</p>
+
+<h2>3. 기기에 저장되는 데이터</h2>
+<p>앱은 귀하가 만든 환경설정과 콘텐츠를 저장하기 위해 기기의 로컬 저장소를 사용합니다:</p>
+<ul>
+  <li>언어 환경설정</li>
+  <li>저장한 구절 및 북마크</li>
+  <li>일기 및 저널 기록</li>
+  <li>기도 제목</li>
+  <li>오늘의 말씀 열람 기록</li>
+</ul>
+<p>이 모든 데이터는 오직 귀하의 기기에만 저장됩니다. 외부 서버나 클라우드 서비스로 업로드·동기화·전송되지 않습니다. 앱을 삭제하거나 기기 설정에서 데이터를 지우면 로컬에 저장된 데이터는 영구적으로 삭제됩니다.</p>
+
+<h2>4. 네트워크 접근</h2>
+<p>앱은 Android의 INTERNET 권한을 선언합니다. 버전 1.1(2026년 4월 7일 업데이트) 기준으로 <strong>앱은 정상 작동 중 외부 네트워크 요청을 하지 않습니다.</strong></p>
+<p>앱이 참조하는 유일한 외부 대상은 귀하가 브라우저에서 열기로 선택할 수 있는 링크뿐입니다: 앱의 안전 정보에 표시되는 위기 지원 디렉터리(<a href="https://findahelpline.com">findahelpline.com</a>)와 퍼블릭 도메인 성경 출처 표시 페이지입니다. 앱은 이 사이트들에 데이터를 보내지 않으며, 귀하가 누를 때만 열리고, 방문한 후에는 해당 사이트의 개인정보처리방침이 적용됩니다.</p>
+<p>모든 글꼴(Cormorant Garamond 및 Lato)은 앱에 포함되어 기기에서 제공됩니다. Google Fonts나 다른 외부 서버로 글꼴 요청을 하지 않습니다.</p>
+<p>모든 성경 본문, 번역, 검색 색인 및 앱 콘텐츠는 앱에 포함되어 인터넷 연결 없이 완전히 사용할 수 있습니다.</p>
+<p><em>참고: 2026년 4월 7일 이전에는 앱이 Google Fonts(fonts.googleapis.com / fonts.gstatic.com)에서 글꼴을 불러왔으며, 그 HTTP 요청의 부수적 결과로 기기의 IP 주소가 Google에 전송되었습니다. 이 외부 의존성은 제거되었습니다.</em></p>
+
+<h2>5. 제3자 서비스</h2>
+<p>앱은 다음 중 어느 것도 통합하지 않습니다:</p>
+<ul>
+  <li>분석 서비스(Google Analytics, Firebase Analytics 등 없음)</li>
+  <li>충돌 또는 오류 보고 서비스</li>
+  <li>광고 네트워크 또는 광고 SDK</li>
+  <li>소셜 미디어 로그인 또는 공유 SDK</li>
+  <li>클라우드 저장, 백업 또는 동기화 서비스</li>
+  <li>푸시 알림 서비스</li>
+  <li>외부 글꼴 서비스(글꼴은 앱 내에 자체 호스팅됨)</li>
+</ul>
+<p>앱은 외부 네트워크 요청을 하지 않습니다. 모든 콘텐츠는 오프라인에서 사용할 수 있습니다.</p>
+
+<h2>6. 쿠키 및 추적</h2>
+<p>앱은 쿠키, 웹 비콘, 픽셀 또는 이와 유사한 추적 기술을 사용하지 않습니다.</p>
+
+<h2>7. 아동의 개인정보</h2>
+<p>앱은 만 13세 미만(또는 귀하의 관할권에서 적용되는 디지털 동의 연령 미만)의 아동을 특별히 대상으로 하지 않습니다. 앱은 아동을 포함한 어떠한 사용자로부터도 개인정보를 고의로 수집하지 않습니다.</p>
+
+<h2>8. 데이터 삭제</h2>
+<p>앱은 어떤 서버에도 데이터를 수집하거나 저장하지 않으므로 삭제할 서버 측 데이터가 없습니다. 로컬에 저장된 모든 데이터(저장한 구절, 일기, 환경설정)를 제거하려면:</p>
+<ul>
+  <li>기기의 설정 &gt; 앱 &gt; Bible Peace &gt; 데이터 지우기에서 앱 데이터를 지우십시오</li>
+  <li>앱을 삭제하십시오</li>
+</ul>
+
+<h2>9. 본 방침의 변경</h2>
+<p>당사는 본 개인정보처리방침을 수시로 갱신할 수 있습니다. 모든 변경은 본 문서 상단의 "최종 업데이트" 날짜에 반영됩니다. 변경 후에도 앱을 계속 사용하는 경우 개정된 방침에 동의한 것으로 간주됩니다.</p>
+
+<h2>10. 연락처</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  이메일: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
+</div>
+</div>
+
+<!-- ═══════════════ 中文 (Chinese, Simplified) ═══════════════ -->
+<div class="lang-content" data-lang="zh">
+<h1>隐私政策 — Bible Peace</h1>
+<p class="updated">最后更新：2026年5月29日</p>
+<div class="gov-note">这是为方便而提供的翻译。本隐私政策具有法律约束力的版本为英文版；如有出入，以英文版为准。</div>
+
+<h2>1. 关于本政策</h2>
+<p>本隐私政策说明 Bible Peace（"本应用"）如何处理信息。本应用由 Artistic Life Research 开发并提供。</p>
+<p>Bible Peace 是一款圣经辅助应用，通过关键词检索，帮助用户在 12 种语言的旧约与新约文本中查找相关经文。本应用不使用人工智能生成灵性建议、情感指导或原创宗教内容。</p>
+<p>如对本政策有任何疑问，请通过以下方式联系我们：<a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a></p>
+
+<h2>2. 我们不收集的信息</h2>
+<p>本应用不收集、不在任何服务器上存储、也不向任何第三方传输以下类型的信息：</p>
+<ul>
+  <li>个人信息（姓名、电子邮箱、电话号码、实际地址、出生日期等）</li>
+  <li>位置数据</li>
+  <li>设备标识符或广告 ID</li>
+  <li>使用分析或行为数据</li>
+  <li>财务或支付信息</li>
+  <li>照片、视频或音频</li>
+  <li>联系人列表、日历数据或消息</li>
+</ul>
+<p>本应用不要求任何形式的用户注册、登录或创建账户。</p>
+
+<h2>3. 存储在您设备上的数据</h2>
+<p>本应用使用您设备的本地存储来保存您的偏好和您创建的内容：</p>
+<ul>
+  <li>语言偏好</li>
+  <li>已保存的经文和书签</li>
+  <li>日记条目</li>
+  <li>祷告事项</li>
+  <li>每日经文浏览记录</li>
+</ul>
+<p>所有这些数据仅存储在您的设备上。绝不会上传、同步或传输到任何外部服务器或云服务。如果您卸载本应用或通过设备设置清除其数据，这些本地存储的数据将被永久删除。</p>
+
+<h2>4. 网络访问</h2>
+<p>本应用声明了 Android 的 INTERNET 权限。自版本 1.1（2026年4月7日更新）起，<strong>本应用在正常运行期间不发出任何外部网络请求。</strong></p>
+<p>本应用引用的唯一外部目标是您可以选择在浏览器中打开的链接：在应用安全信息中显示的危机支持目录（<a href="https://findahelpline.com">findahelpline.com</a>），以及公有领域圣经来源署名页面。本应用不向这些网站发送任何数据；它们仅在您点击时才会打开，您访问后将适用其各自的隐私政策。</p>
+<p>所有字体（Cormorant Garamond 和 Lato）均随应用打包并由设备提供。不会向 Google Fonts 或任何其他外部服务器发出字体请求。</p>
+<p>所有圣经文本、译本、检索索引和应用内容均随应用打包，无需联网即可完全使用。</p>
+<p><em>注：2026年4月7日之前，本应用曾从 Google Fonts（fonts.googleapis.com / fonts.gstatic.com）加载字体，作为 HTTP 请求的附带结果，将设备的 IP 地址传输给 Google。该外部依赖已被移除。</em></p>
+
+<h2>5. 第三方服务</h2>
+<p>本应用未集成以下任何项：</p>
+<ul>
+  <li>分析服务（无 Google Analytics、Firebase Analytics 等）</li>
+  <li>崩溃或错误报告服务</li>
+  <li>广告网络或广告 SDK</li>
+  <li>社交媒体登录或分享 SDK</li>
+  <li>云存储、备份或同步服务</li>
+  <li>推送通知服务</li>
+  <li>外部字体服务（字体在应用内自托管）</li>
+</ul>
+<p>本应用不发出任何外部网络请求。所有内容均可离线使用。</p>
+
+<h2>6. Cookie 与跟踪</h2>
+<p>本应用不使用 Cookie、网络信标、像素或任何类似的跟踪技术。</p>
+
+<h2>7. 儿童隐私</h2>
+<p>本应用并非专门面向 13 岁以下（或您所在司法管辖区适用的数字同意年龄以下）的儿童。本应用不会有意收集任何用户（包括儿童）的任何个人信息。</p>
+
+<h2>8. 数据删除</h2>
+<p>由于本应用不在任何服务器上收集或存储数据，因此没有服务器端数据需要删除。要删除所有本地存储的数据（已保存的经文、日记条目、偏好设置），您可以：</p>
+<ul>
+  <li>通过您设备的"设置 &gt; 应用 &gt; Bible Peace &gt; 清除数据"清除应用数据</li>
+  <li>卸载本应用</li>
+</ul>
+
+<h2>9. 本政策的变更</h2>
+<p>我们可能会不时更新本隐私政策。任何变更都将反映在本文件顶部的"最后更新"日期中。变更后继续使用本应用即构成接受修订后的政策。</p>
+
+<h2>10. 联系方式</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  电子邮箱：<a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
+</div>
+</div>
+
+<!-- ═══════════════ Русский (Russian) ═══════════════ -->
+<div class="lang-content" data-lang="ru">
+<h1>Политика конфиденциальности — Bible Peace</h1>
+<p class="updated">Последнее обновление: 29 мая 2026 г.</p>
+<div class="gov-note">Это перевод, предоставленный для удобства. Юридически обязательной версией настоящей Политики конфиденциальности является английская версия; в случае расхождений преимущественную силу имеет английский текст.</div>
+
+<h2>1. Об этой политике</h2>
+<p>Настоящая Политика конфиденциальности описывает, как Bible Peace («Приложение») обрабатывает информацию. Приложение разработано и предоставляется Artistic Life Research.</p>
+<p>Bible Peace — это приложение-компаньон для Священного Писания, которое помогает пользователям находить соответствующие библейские стихи с помощью поиска по ключевым словам в текстах Ветхого и Нового Завета на 12 языках. Приложение не использует искусственный интеллект для создания духовных советов, эмоционального сопровождения или оригинального религиозного содержания.</p>
+<p>Если у вас есть вопросы об этой политике, свяжитесь с нами: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a></p>
+
+<h2>2. Информация, которую мы не собираем</h2>
+<p>Приложение не собирает, не хранит на каком-либо сервере и не передаёт третьим лицам следующие типы информации:</p>
+<ul>
+  <li>Персональные данные (имя, адрес электронной почты, номер телефона, физический адрес, дата рождения и т. д.)</li>
+  <li>Данные о местоположении</li>
+  <li>Идентификаторы устройства или рекламные идентификаторы</li>
+  <li>Аналитику использования или поведенческие данные</li>
+  <li>Финансовую или платёжную информацию</li>
+  <li>Фотографии, видео или аудио</li>
+  <li>Списки контактов, данные календаря или сообщения</li>
+</ul>
+<p>Приложение не требует никакой регистрации пользователя, входа в систему или создания учётной записи.</p>
+
+<h2>3. Данные, хранящиеся на вашем устройстве</h2>
+<p>Приложение использует локальное хранилище вашего устройства для сохранения настроек и создаваемого вами содержимого:</p>
+<ul>
+  <li>Языковые настройки</li>
+  <li>Сохранённые стихи и закладки</li>
+  <li>Записи дневника</li>
+  <li>Молитвенные намерения</li>
+  <li>История просмотра стиха дня</li>
+</ul>
+<p>Все эти данные хранятся исключительно на вашем устройстве. Они никогда не загружаются, не синхронизируются и не передаются на какой-либо внешний сервер или облачный сервис. Если вы удалите Приложение или очистите его данные через настройки устройства, эти локально хранящиеся данные будут безвозвратно удалены.</p>
+
+<h2>4. Доступ к сети</h2>
+<p>Приложение объявляет разрешение Android INTERNET. Начиная с версии 1.1 (обновлено 7 апреля 2026 г.), <strong>Приложение не выполняет внешних сетевых запросов при обычной работе.</strong></p>
+<p>Единственные внешние адреса, на которые ссылается Приложение, — это ссылки, которые вы можете открыть в браузере: каталог кризисной поддержки (<a href="https://findahelpline.com">findahelpline.com</a>), отображаемый в информации о безопасности Приложения, и страницы указания источников библейских текстов общественного достояния. Приложение не отправляет данные на эти сайты; они открываются только если вы нажмёте на них, и после их посещения применяются их собственные политики конфиденциальности.</p>
+<p>Все шрифты (Cormorant Garamond и Lato) включены в состав Приложения и предоставляются с устройства. Запросы шрифтов к Google Fonts или любому другому внешнему серверу не выполняются.</p>
+<p>Все библейские тексты, переводы, поисковые индексы и содержимое приложения включены в состав Приложения и полностью доступны без подключения к интернету.</p>
+<p><em>Примечание: До 7 апреля 2026 г. Приложение загружало шрифты из Google Fonts (fonts.googleapis.com / fonts.gstatic.com), что приводило к передаче IP-адреса устройства в Google как побочного эффекта HTTP-запроса. Эта внешняя зависимость была удалена.</em></p>
+
+<h2>5. Сторонние сервисы</h2>
+<p>Приложение не интегрирует ни один из следующих сервисов:</p>
+<ul>
+  <li>Сервисы аналитики (нет Google Analytics, Firebase Analytics и подобных)</li>
+  <li>Сервисы отчётов о сбоях или ошибках</li>
+  <li>Рекламные сети или рекламные SDK</li>
+  <li>SDK для входа через социальные сети или обмена в них</li>
+  <li>Сервисы облачного хранения, резервного копирования или синхронизации</li>
+  <li>Сервисы push-уведомлений</li>
+  <li>Внешние сервисы шрифтов (шрифты размещены внутри Приложения)</li>
+</ul>
+<p>Приложение не выполняет внешних сетевых запросов. Всё содержимое доступно офлайн.</p>
+
+<h2>6. Файлы cookie и отслеживание</h2>
+<p>Приложение не использует файлы cookie, веб-маяки, пиксели или любые подобные технологии отслеживания.</p>
+
+<h2>7. Конфиденциальность детей</h2>
+<p>Приложение не предназначено специально для детей младше 13 лет (или применимого в вашей юрисдикции возраста цифрового согласия). Приложение сознательно не собирает никакой персональной информации ни от каких пользователей, включая детей.</p>
+
+<h2>8. Удаление данных</h2>
+<p>Поскольку Приложение не собирает и не хранит данные на каком-либо сервере, серверных данных для удаления нет. Чтобы удалить все локально хранящиеся данные (сохранённые стихи, записи дневника, настройки), вы можете:</p>
+<ul>
+  <li>Очистить данные Приложения через «Настройки &gt; Приложения &gt; Bible Peace &gt; Очистить данные» вашего устройства</li>
+  <li>Удалить Приложение</li>
+</ul>
+
+<h2>9. Изменения этой политики</h2>
+<p>Мы можем время от времени обновлять настоящую Политику конфиденциальности. Любые изменения будут отражены в дате «Последнее обновление» в верхней части этого документа. Продолжение использования Приложения после изменений означает принятие пересмотренной политики.</p>
+
+<h2>10. Контакты</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  Эл. почта: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
+</div>
+</div>
+
+<!-- ═══════════════ العربية (Arabic) ═══════════════ -->
+<div class="lang-content" data-lang="ar" dir="rtl">
+<h1>سياسة الخصوصية — Bible Peace</h1>
+<p class="updated">آخر تحديث: 29 مايو 2026</p>
+<div class="gov-note">هذه ترجمة مقدَّمة للتيسير. النسخة الإنجليزية هي النسخة المُلزِمة قانونًا من سياسة الخصوصية هذه؛ وفي حال وجود أي اختلاف، يُعتدّ بالنص الإنجليزي.</div>
+
+<h2>1. حول هذه السياسة</h2>
+<p>تصف سياسة الخصوصية هذه كيف يتعامل تطبيق Bible Peace ("التطبيق") مع المعلومات. التطبيق مطوَّر ومقدَّم من Artistic Life Research.</p>
+<p>Bible Peace تطبيق مرافق للكتاب المقدس يساعد المستخدمين على إيجاد آيات كتابية ذات صلة من خلال البحث بالكلمات المفتاحية في نصوص العهدين القديم والجديد بـ 12 لغة. لا يستخدم التطبيق الذكاء الاصطناعي لتوليد مشورة روحية أو توجيه عاطفي أو محتوى ديني أصلي.</p>
+<p>إذا كانت لديك أي أسئلة حول هذه السياسة، يُرجى التواصل معنا على: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a></p>
+
+<h2>2. المعلومات التي لا نجمعها</h2>
+<p>لا يجمع التطبيق الأنواع التالية من المعلومات ولا يخزّنها على أي خادم ولا ينقلها إلى أي طرف ثالث:</p>
+<ul>
+  <li>المعلومات الشخصية (الاسم، البريد الإلكتروني، رقم الهاتف، العنوان الفعلي، تاريخ الميلاد، إلخ)</li>
+  <li>بيانات الموقع</li>
+  <li>معرّفات الجهاز أو معرّفات الإعلان</li>
+  <li>تحليلات الاستخدام أو البيانات السلوكية</li>
+  <li>المعلومات المالية أو معلومات الدفع</li>
+  <li>الصور أو الفيديو أو الصوت</li>
+  <li>قوائم جهات الاتصال أو بيانات التقويم أو الرسائل</li>
+</ul>
+<p>لا يتطلب التطبيق أي تسجيل للمستخدم أو تسجيل دخول أو إنشاء حساب من أي نوع.</p>
+
+<h2>3. البيانات المخزَّنة على جهازك</h2>
+<p>يستخدم التطبيق التخزين المحلي لجهازك لحفظ التفضيلات والمحتوى الذي تنشئه:</p>
+<ul>
+  <li>تفضيل اللغة</li>
+  <li>الآيات المحفوظة والإشارات المرجعية</li>
+  <li>مدوّنات اليوميات</li>
+  <li>نوايا الصلاة</li>
+  <li>سجل عرض آية اليوم</li>
+</ul>
+<p>تُخزَّن كل هذه البيانات حصريًا على جهازك. ولا يتم أبدًا رفعها أو مزامنتها أو نقلها إلى أي خادم خارجي أو خدمة سحابية. إذا أزلت التطبيق أو مسحت بياناته من إعدادات جهازك، فستُحذف هذه البيانات المخزَّنة محليًا نهائيًا.</p>
+
+<h2>4. الوصول إلى الشبكة</h2>
+<p>يعلن التطبيق عن إذن INTERNET في أندرويد. اعتبارًا من الإصدار 1.1 (محدَّث في 7 أبريل 2026)، <strong>لا يُجري التطبيق أي طلبات شبكة خارجية أثناء التشغيل العادي.</strong></p>
+<p>الوجهات الخارجية الوحيدة التي يشير إليها التطبيق هي روابط قد تختار فتحها في متصفحك: دليل دعم الأزمات (<a href="https://findahelpline.com">findahelpline.com</a>) المعروض في معلومات الأمان بالتطبيق، وصفحات نَسب مصادر الكتاب المقدس في الملك العام. لا يرسل التطبيق أي بيانات إلى هذه المواقع؛ فهي لا تُفتح إلا إذا نقرت عليها، وبمجرد زيارتها تنطبق سياسات الخصوصية الخاصة بها.</p>
+<p>جميع الخطوط (Cormorant Garamond وLato) مضمَّنة داخل التطبيق وتُقدَّم من الجهاز. ولا تُرسَل أي طلبات خطوط إلى Google Fonts أو أي خادم خارجي آخر.</p>
+<p>جميع نصوص الكتاب المقدس والترجمات وفهارس البحث ومحتوى التطبيق مضمَّنة داخل التطبيق ومتاحة بالكامل دون اتصال بالإنترنت.</p>
+<p><em>ملاحظة: قبل 7 أبريل 2026، كان التطبيق يحمّل الخطوط من Google Fonts (fonts.googleapis.com / fonts.gstatic.com)، مما كان ينقل عنوان IP الخاص بالجهاز إلى Google كأثر جانبي لطلب HTTP. وقد أُزيلت هذه التبعية الخارجية.</em></p>
+
+<h2>5. خدمات الأطراف الثالثة</h2>
+<p>لا يدمج التطبيق أيًّا مما يلي:</p>
+<ul>
+  <li>خدمات التحليلات (لا Google Analytics ولا Firebase Analytics ولا ما شابه)</li>
+  <li>خدمات الإبلاغ عن الأعطال أو الأخطاء</li>
+  <li>شبكات الإعلانات أو حِزم تطوير الإعلانات (SDK)</li>
+  <li>حِزم تسجيل الدخول أو المشاركة عبر وسائل التواصل الاجتماعي</li>
+  <li>خدمات التخزين السحابي أو النسخ الاحتياطي أو المزامنة</li>
+  <li>خدمات الإشعارات الفورية</li>
+  <li>خدمات الخطوط الخارجية (الخطوط مستضافة داخل التطبيق)</li>
+</ul>
+<p>لا يُجري التطبيق أي طلبات شبكة خارجية. وكل المحتوى متاح دون اتصال.</p>
+
+<h2>6. ملفات تعريف الارتباط والتتبّع</h2>
+<p>لا يستخدم التطبيق ملفات تعريف الارتباط أو إشارات الويب أو وحدات البكسل أو أي تقنيات تتبّع مماثلة.</p>
+
+<h2>7. خصوصية الأطفال</h2>
+<p>التطبيق غير موجَّه تحديدًا للأطفال دون 13 عامًا (أو سن الموافقة الرقمية المعمول به في نطاق اختصاصك). ولا يجمع التطبيق عن قصد أي معلومات شخصية من أي مستخدم، بمن فيهم الأطفال.</p>
+
+<h2>8. حذف البيانات</h2>
+<p>بما أن التطبيق لا يجمع أو يخزّن بيانات على أي خادم، فلا توجد بيانات من جانب الخادم لحذفها. لإزالة جميع البيانات المخزَّنة محليًا (الآيات المحفوظة، مدوّنات اليوميات، التفضيلات)، يمكنك:</p>
+<ul>
+  <li>مسح بيانات التطبيق من «الإعدادات &gt; التطبيقات &gt; Bible Peace &gt; مسح البيانات» في جهازك</li>
+  <li>إزالة تثبيت التطبيق</li>
+</ul>
+
+<h2>9. التغييرات على هذه السياسة</h2>
+<p>قد نحدّث سياسة الخصوصية هذه من حين لآخر. وستنعكس أي تغييرات في تاريخ «آخر تحديث» أعلى هذا المستند. ويُعدّ استمرارك في استخدام التطبيق بعد التغييرات قبولًا للسياسة المعدَّلة.</p>
+
+<h2>10. التواصل</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  البريد الإلكتروني: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
+</div>
+</div>
+
+<!-- ═══════════════ Latina (Latin) ═══════════════ -->
+<div class="lang-content" data-lang="la">
+<h1>Politica Privatitatis — Bible Peace</h1>
+<p class="updated">Ultima renovatio: 29 Maii 2026</p>
+<div class="gov-note">Haec est translatio commoditatis causa praebita. Versio Anglica est versio iuridice obligans huius Politicae Privatitatis; si quid discrepat, textus Anglicus praevalet.</div>
+
+<h2>1. De Hac Politica</h2>
+<p>Haec Politica Privatitatis describit quomodo Bible Peace ("Applicatio") informationem tractet. Applicatio ab Artistic Life Research excogitata et praebita est.</p>
+<p>Bible Peace est applicatio comes Scripturarum quae usuariis adiuvat ut versiculos biblicos pertinentes per inquisitionem verborum clavis in textibus Veteris et Novi Testamenti duodecim linguis inveniant. Applicatio intelligentia artificiali non utitur ad consilium spirituale, directionem affectuum vel contentum religiosum originale generandum.</p>
+<p>Si quas quaestiones de hac politica habes, nos quaeso conveni apud: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a></p>
+
+<h2>2. Informatio Quam Non Colligimus</h2>
+<p>Applicatio sequentia genera informationis non colligit, in ullo servitore non condit nec ad ullum tertium transmittit:</p>
+<ul>
+  <li>Informationem personalem (nomen, inscriptionem electronicam, numerum telephonicum, inscriptionem physicam, diem natalem, etc.)</li>
+  <li>Data loci</li>
+  <li>Identificatores instrumenti vel identificatores publicitatis</li>
+  <li>Analyses usus vel data morum</li>
+  <li>Informationem financiariam vel solutionis</li>
+  <li>Imagines, pellicula vel audio</li>
+  <li>Indices contactuum, data calendarii vel nuntios</li>
+</ul>
+<p>Applicatio nullam inscriptionem usuarii, ingressum vel creationem rationis ullius generis requirit.</p>
+
+<h2>3. Data in Instrumento Tuo Condita</h2>
+<p>Applicatio promptuario locali instrumenti tui utitur ad praeferentias et contentum quod creas servanda:</p>
+<ul>
+  <li>Praeferentiam linguae</li>
+  <li>Versiculos servatos et signacula</li>
+  <li>Inscriptiones diarii</li>
+  <li>Intentiones orationis</li>
+  <li>Historiam visionis versiculi cotidiani</li>
+</ul>
+<p>Omnia haec data exclusive in instrumento tuo conduntur. Numquam in ullum servitorem externum vel servitium nubis imponuntur, synchronizantur aut transmittuntur. Si Applicationem deinstallas vel eius data per optiones instrumenti purgas, haec data localiter condita perpetuo delebuntur.</p>
+
+<h2>4. Accessus ad Rete</h2>
+<p>Applicatio permissionem Android INTERNET declarat. A versione 1.1 (renovata die 7 Aprilis 2026), <strong>Applicatio nullas petitiones retis externas in operatione normali facit.</strong></p>
+<p>Sola loca externa ad quae Applicatio refert sunt nexus quos in navigatro tuo aperire eligere potes: index auxilii crisis (<a href="https://findahelpline.com">findahelpline.com</a>) in informatione securitatis Applicationis monstratus, et paginae attributionis fontium Scripturae dominii publici. Applicatio nulla data his locis mittit; aperiuntur solum si ea tangis, et postquam ea visitas, propriae eorum politicae privatitatis applicantur.</p>
+<p>Omnes typi (Cormorant Garamond et Lato) intra Applicationem inclusi sunt et ab instrumento praebentur. Nullae petitiones typorum ad Google Fonts vel ullum alium servitorem externum fiunt.</p>
+<p>Omnes textus Scripturae, translationes, indices inquisitionis et contentum applicationis intra Applicationem inclusi sunt et plene sine connexione interretiali praesto sunt.</p>
+<p><em>Nota: Ante diem 7 Aprilis 2026, Applicatio typos a Google Fonts (fonts.googleapis.com / fonts.gstatic.com) onerabat, quod inscriptionem IP instrumenti ad Google ut effectum secundarium petitionis HTTP transmittebat. Haec dependentia externa remota est.</em></p>
+
+<h2>5. Servitia Tertiarum Partium</h2>
+<p>Applicatio nullum ex sequentibus integrat:</p>
+<ul>
+  <li>Servitia analytica (nullum Google Analytics, Firebase Analytics vel simile)</li>
+  <li>Servitia relationis ruinarum vel errorum</li>
+  <li>Retia publicitatis vel SDK publicitatis</li>
+  <li>SDK ingressus vel communicationis per media socialia</li>
+  <li>Servitia repositionis, subsidii vel synchronizationis in nube</li>
+  <li>Servitia notificationum impulsus</li>
+  <li>Servitia typorum externa (typi intra Applicationem hospitantur)</li>
+</ul>
+<p>Applicatio nullas petitiones retis externas facit. Omne contentum sine connexione praesto est.</p>
+
+<h2>6. Crustula et Investigatio</h2>
+<p>Applicatio crustulis (cookies), pharis interretialibus, pixellis vel ulla tali technologia investigationis non utitur.</p>
+
+<h2>7. Privatitas Puerorum</h2>
+<p>Applicatio non specialiter ad pueros infra 13 annos (vel aetatem consensus digitalis in tua iurisdictione applicabilem) directa est. Applicatio scienter nullam informationem personalem ab ullo usuario, pueris inclusis, colligit.</p>
+
+<h2>8. Deletio Datorum</h2>
+<p>Cum Applicatio data in ullo servitore non colligat nec condat, nulla data ex parte servitoris delenda sunt. Ad omnia data localiter condita (versiculos servatos, inscriptiones diarii, praeferentias) removenda, potes:</p>
+<ul>
+  <li>Data Applicationis purgare per "Optiones &gt; Applicationes &gt; Bible Peace &gt; Purgare Data" instrumenti tui</li>
+  <li>Applicationem deinstallare</li>
+</ul>
+
+<h2>9. Mutationes Huius Politicae</h2>
+<p>Hanc Politicam Privatitatis interdum renovare possumus. Ullae mutationes in die "Ultima renovatio" in summo huius documenti reflectentur. Usus Applicationis continuatus post mutationes acceptationem politicae revisae constituit.</p>
+
+<h2>10. Contactus</h2>
+<div class="contact">
+  <strong>Artistic Life Research</strong><br>
+  Epistula electronica: <a href="mailto:artisticlife.research@gmail.com">artisticlife.research@gmail.com</a>
+</div>
+</div>
+
+<script>
+  var LEGAL_LANGS = ['en','es','pt','fr','de','it','ja','ko','zh','ru','ar','la'];
+  function showLang(l) {
+    if (LEGAL_LANGS.indexOf(l) < 0) l = 'en';
+    document.querySelectorAll('.lang-content').forEach(function(d) {
+      d.classList.toggle('active', d.dataset.lang === l);
+    });
+    document.documentElement.lang = l;
+    document.documentElement.dir = (l === 'ar') ? 'rtl' : 'ltr';
+    var sel = document.getElementById('langSelect');
+    if (sel) sel.value = l;
+    try { localStorage.setItem('bp_legal_lang', l); } catch(e) {}
+  }
+  (function() {
+    var saved = null; try { saved = localStorage.getItem('bp_legal_lang'); } catch(e) {}
+    var nav = (navigator.language || 'en').toLowerCase().split('-')[0];
+    var qs = (location.search.match(/[?&]lang=([a-z]{2})/) || [])[1];
+    var pick = (qs && LEGAL_LANGS.indexOf(qs) >= 0) ? qs
+             : (saved && LEGAL_LANGS.indexOf(saved) >= 0) ? saved
+             : (LEGAL_LANGS.indexOf(nav) >= 0 ? nav : 'en');
+    showLang(pick);
+  })();
+</script>
 
 </body>
 </html>
